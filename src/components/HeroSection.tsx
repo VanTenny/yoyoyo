@@ -24,13 +24,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
           />
         </div>
         
-        <h1 className={`text-6xl md:text-8xl font-bold mb-6 animate-fade-in delay-300 ${
+        <h1 className={`text-6xl md:text-8xl font-bold mb-4 animate-fade-in delay-300 ${
           darkMode ? 'text-white' : 'text-gray-900'
-        }`}>
-          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+        } font-serif tracking-wider`}>
+          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent font-extrabold italic">
             Tenzing Jampa
           </span>
         </h1>
+        
+        <div className="mb-8 animate-fade-in delay-400">
+          <p className={`text-lg md:text-xl mb-2 ${
+            darkMode ? 'text-gray-300' : 'text-gray-600'
+          }`}>
+            Fourth Year Undergraduate at <span className="font-semibold text-blue-400">IIT Bombay</span>
+          </p>
+          <p className={`text-lg md:text-xl mb-6 ${
+            darkMode ? 'text-gray-300' : 'text-gray-600'
+          }`}>
+            Majoring in <span className="font-semibold text-purple-400">Engineering Physics</span>
+          </p>
+        </div>
         
         <p className={`text-xl md:text-2xl mb-8 animate-fade-in delay-500 ${
           darkMode ? 'text-gray-300' : 'text-gray-600'
