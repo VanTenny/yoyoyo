@@ -7,9 +7,19 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
   return (
-    <section className={`min-h-screen flex items-center justify-center relative overflow-hidden ${
-      darkMode ? 'bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900' : 'bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50'
-    }`}>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/6d01476a-c61c-431a-93b3-eed392e50c3f.png')`
+        }}
+      >
+        {/* Dark overlay for better text readability */}
+        <div className={`absolute inset-0 ${darkMode ? 'bg-black/50' : 'bg-black/30'}`}></div>
+      </div>
+
+      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -24,30 +34,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
           />
         </div>
         
-        <h1 className={`text-6xl md:text-8xl font-bold mb-4 animate-fade-in delay-300 ${
-          darkMode ? 'text-white' : 'text-gray-900'
-        } font-serif tracking-wider`}>
+        <h1 className="text-6xl md:text-8xl font-bold mb-4 animate-fade-in delay-300 text-white font-serif tracking-wider">
           <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent font-extrabold italic">
             Tenzing Jampa
           </span>
         </h1>
         
         <div className="mb-8 animate-fade-in delay-400">
-          <p className={`text-lg md:text-xl mb-2 ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}>
+          <p className="text-lg md:text-xl mb-2 text-gray-200">
             Fourth Year Undergraduate at <span className="font-semibold text-blue-400">IIT Bombay</span>
           </p>
-          <p className={`text-lg md:text-xl mb-6 ${
-            darkMode ? 'text-gray-300' : 'text-gray-600'
-          }`}>
+          <p className="text-lg md:text-xl mb-6 text-gray-200">
             Majoring in <span className="font-semibold text-purple-400">Engineering Physics</span>
           </p>
         </div>
         
-        <p className={`text-xl md:text-2xl mb-8 animate-fade-in delay-500 ${
-          darkMode ? 'text-gray-300' : 'text-gray-600'
-        }`}>
+        <p className="text-xl md:text-2xl mb-8 animate-fade-in delay-500 text-gray-200">
           Full Stack Developer & Creative Innovator
         </p>
         
