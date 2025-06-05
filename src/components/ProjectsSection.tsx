@@ -1,5 +1,4 @@
 import React from 'react';
-import RCimg from './components/rc.jpg';
 import { Github, CircuitBoard, Cpu, Bot, Telescope, Plane } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -18,7 +17,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <CircuitBoard size={40} />,
       technologies: ["Python", "Differential Equations", "Data Analysis"],
       image:
-        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpg", // Mars rover/engineering
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop", // Engineering/analysis
       link: "https://example.com/mechanical-impacting-system"
     },
     {
@@ -28,7 +27,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Cpu size={40} />,
       technologies: ["Analog Electronics", "Op-amps", "Control Systems"],
       image:
-        "https://images.pexels.com/photos/163100/electronics-diy-led-breadboard-163100.jpeg?auto=compress&w=400&h=250&fit=crop", // Breadboard/circuit
+        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop", // Breadboard/circuit
       link: "https://example.com/ligo-breadboard"
     },
     {
@@ -38,7 +37,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Github size={40} />,
       technologies: ["Arduino", "Bluetooth", "Embedded Systems"],
       image:
-        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpg", // Mars rover/robotic tech
+        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&h=250&fit=crop", // Arduino/IR
       link: "https://example.com/infrared-controller"
     },
     {
@@ -48,7 +47,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Bot size={40} />,
       technologies: ["Robotics", "Bluetooth", "Embedded Systems", "IR Sensors"],
       image:
-        "https://cdn.pixabay.com/photo/2016/03/27/22/22/robot-1284373_1280.jpg", // Wall-E LEGO robot
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop", // Wall-E/robotics
       link: "https://example.com/line-following-bot"
     },
     {
@@ -57,7 +56,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
         "Designed and constructed a remote-controlled trainer plane, carefully dimensioning control surfaces and integrating electronics. Completed training in flight dynamics and control systems.",
       icon: <Plane size={40} />,
       technologies: ["Aerodynamics", "Embedded Systems", "Flight Dynamics", "RC Design"],
-      image: <img src={RCimg} alt="RC Trainer Plane" />, // RC plane
+      image:
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop", // RC plane/flight
       link: "https://example.com/rc-trainer-plane"
     },
     {
@@ -67,7 +67,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Telescope size={40} />,
       technologies: ["Astrophysics", "LaTeX", "Scientific Writing"],
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/7/7a/COSMOS_3D_dark_matter_map.png", // NASA/ESA dark matter map
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=250&fit=crop", // Astronomy/space
       link: "https://example.com/cosmology-dark-matter"
     },
   ];
