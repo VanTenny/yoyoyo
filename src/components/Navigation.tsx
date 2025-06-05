@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Moon, Github, Linkedin, Instagram, Mail, Phone } from 'lucide-react';
+import { Moon, Github, Linkedin, Mail, } from 'lucide-react';
 
 interface NavigationProps {
   darkMode: boolean;
