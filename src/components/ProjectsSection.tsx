@@ -27,8 +27,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Cpu size={40} />,
       technologies: ["Analog Electronics", "Op-amps", "Control Systems"],
       image:
-        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop",
-      link: "https://example.com/ligo-breadboard"
+        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop"
+      // No link
     },
     {
       title: "Smart Appliance Infrared Controller",
