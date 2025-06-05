@@ -42,7 +42,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
         
         <div className="mb-8 animate-fade-in delay-400">
           <p className="text-lg md:text-xl mb-2 text-gray-200">
-            Fourth Year Undergraduate at <span className="font-semibold text-blue-400">IIT Bombay</span>
+            Final Year Undergraduate at <span className="font-semibold text-blue-400">IIT Bombay</span>
           </p>
           <p className="text-lg md:text-xl mb-6 text-gray-200">
             Majoring in <span className="font-semibold text-purple-400">Engineering Physics</span>
@@ -50,7 +50,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
         </div>
         
         <p className="text-xl md:text-2xl mb-8 animate-fade-in delay-500 text-gray-200">
-          Full Stack Developer & Creative Innovator
+            Researcher and a Fitness Enthusiast
         </p>
         
         <div className="animate-fade-in delay-700">
