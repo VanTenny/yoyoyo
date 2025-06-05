@@ -39,7 +39,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
               </p>
               
               <div className="flex flex-wrap gap-3 mt-8">
-                {['React', 'TypeScript', 'Node.js', 'Python', 'AWS', 'Docker'].map((skill, index) => (
+                {['C++', 'Autodesk 360', 'Node.js', 'Python', 'Blender', 'LTspice', 'LaTeX','Figma'].map((skill, index) => (
                   <span 
                     key={skill}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${

@@ -45,21 +45,18 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
 
           <div className="flex items-center space-x-4">
             <div className="flex space-x-2">
-              <a href="mailto:your.email@example.com" className="p-2 rounded-full hover:scale-110 transition-transform duration-300">
+              <a href="mailto:22B1808@iitb.ac.in" className="p-2 rounded-full hover:scale-110 transition-transform duration-300">
                 <Mail size={20} />
               </a>
-              <a href="tel:+1234567890" className="p-2 rounded-full hover:scale-110 transition-transform duration-300">
-                <Phone size={20} />
-              </a>
-              <a href="https://github.com" className="p-2 rounded-full hover:scale-110 transition-transform duration-300">
+              
+              <a href="https://github.com/VanTenny" className="p-2 rounded-full hover:scale-110 transition-transform duration-300">
                 <Github size={20} />
               </a>
-              <a href="https://linkedin.com" className="p-2 rounded-full hover:scale-110 transition-transform duration-300">
+              
+              <a href="https://linkedin.com/in/linkedin.com/in/TenzinZen27" className="p-2 rounded-full hover:scale-110 transition-transform duration-300">
                 <Linkedin size={20} />
               </a>
-              <a href="https://instagram.com" className="p-2 rounded-full hover:scale-110 transition-transform duration-300">
-                <Instagram size={20} />
-              </a>
+              
             </div>
             <button
               onClick={toggleDarkMode}

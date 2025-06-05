@@ -11,28 +11,44 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
   const { ref, isVisible } = useScrollAnimation();
 
   const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and MongoDB",
-      icon: <Github size={40} />,
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop"
-    },
-    {
-      title: "AI Image Generator",
-      description: "Machine learning powered image generation application",
-      icon: <Camera size={40} />,
-      technologies: ["Python", "TensorFlow", "React", "FastAPI"],
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop"
-    },
-    {
-      title: "Task Management App",
-      description: "Collaborative project management tool with real-time updates",
-      icon: <Github size={40} />,
-      technologies: ["Vue.js", "Socket.io", "Express", "PostgreSQL"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop"
-    }
-  ];
+    [
+  {
+    title: "Mechanical Impacting System Simulation",
+    description: "Analyzed and simulated the electrical equivalent of a mechanical impacting system, identifying conditions for chaotic behavior and resolving analytical flaws using Python and differential calculus.",
+    icon: <Github size={40} />,
+    technologies: ["Python", "Differential Equations", "Data Analysis"],
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=400&h=250&fit=crop"
+  },
+  {
+    title: "LIGO on a Breadboard",
+    description: "Engineered a closed-loop feedback system using Op-amps and phototransistors; designed a proportional controller for robust performance across varying light frequencies.",
+    icon: <Camera size={40} />,
+    technologies: ["Analog Electronics", "Op-amps", "Control Systems"],
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop"
+  },
+  {
+    title: "Smart Appliance Infrared Controller",
+    description: "Developed an Arduino-based IR controller with Bluetooth integration, enabling remote operation and storage for multiple devices.",
+    icon: <Github size={40} />,
+    technologies: ["Arduino", "Bluetooth", "Embedded Systems"],
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop"
+  },
+  {
+    title: "Line Following Bot & RC Trainer Plane",
+    description: "Built a Bluetooth-controlled line-following robot with IR sensors and rocker-bogie suspension; designed and constructed a remote-controlled trainer plane focusing on flight dynamics and control systems.",
+    icon: <Camera size={40} />,
+    technologies: ["Robotics", "Bluetooth", "Embedded Systems", "Aerodynamics"],
+    image: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=400&h=250&fit=crop"
+  },
+  {
+    title: "Cosmology and Dark Matter Report",
+    description: "Authored a comprehensive report on cosmology and dark matter, exploring Big Bang theory, cosmic microwave background, general relativity, and dark matter candidates.",
+    icon: <Github size={40} />,
+    technologies: ["Astrophysics", "LaTeX", "Scientific Writing"],
+    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=250&fit=crop"
+  }
+]
+
 
   return (
     <section 
