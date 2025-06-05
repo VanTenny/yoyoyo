@@ -17,8 +17,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <CircuitBoard size={40} />,
       technologies: ["Python", "Differential Equations", "Data Analysis"],
       image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop",
-      link: "https://github.com/VanTenny/Mechanical-Impacting-Simulation-System/blob/main/Mechanical%20Impacting%20Systems-compressed.pdf"
+        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpg", // Mars rover/engineering
+      link: "https://example.com/mechanical-impacting-system"
     },
     {
       title: "LIGO on a Breadboard",
@@ -27,7 +27,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Cpu size={40} />,
       technologies: ["Analog Electronics", "Op-amps", "Control Systems"],
       image:
-        "https://media.istockphoto.com/id/1130499735/photo/electronic-breadboard-with-components.jpg?s=612x612&w=0&k=20&c=2rZy9Q5k9Qy3C6gZLw8n8Xk6kQwQ2EwV9nQ6Qk9Q6Qk=",
+        "https://images.pexels.com/photos/163100/electronics-diy-led-breadboard-163100.jpeg?auto=compress&w=400&h=250&fit=crop", // Breadboard/circuit
       link: "https://example.com/ligo-breadboard"
     },
     {
@@ -37,27 +37,27 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Github size={40} />,
       technologies: ["Arduino", "Bluetooth", "Embedded Systems"],
       image:
-        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpg", // Mars rover/robotic tech
       link: "https://example.com/infrared-controller"
     },
     {
       title: "Line Following Bot",
       description:
-        "Built a Bluetooth-controlled line-following robot with IR sensors and rocker-bogie suspension; selected as one of the best teams for an institute-wide exhibition.",
+        "Built a Bluetooth-controlled line-following robot with IR sensors and rocker-bogie suspension, inspired by Wall-E, and selected for institute-wide exhibition.",
       icon: <Bot size={40} />,
       technologies: ["Robotics", "Bluetooth", "Embedded Systems", "IR Sensors"],
       image:
-        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpghttps://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop",
+        "https://cdn.pixabay.com/photo/2016/03/27/22/22/robot-1284373_1280.jpg", // Wall-E LEGO robot
       link: "https://example.com/line-following-bot"
     },
     {
       title: "RC Trainer Plane",
       description:
-        "Designed and constructed a remote-controlled trainer plane, carefully dimensioning control surfaces and integrating a LiPo battery, transmitter, servo motors, BLDC motor, and ESCs. Completed training in flight dynamics and control systems through simulation and hands-on sessions.",
+        "Designed and constructed a remote-controlled trainer plane, carefully dimensioning control surfaces and integrating electronics. Completed training in flight dynamics and control systems.",
       icon: <Plane size={40} />,
       technologies: ["Aerodynamics", "Embedded Systems", "Flight Dynamics", "RC Design"],
       image:
-        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crophttps://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&h=250&fit=crop", // RC plane image
+        "https://cdn.pixabay.com/photo/2017/03/28/12/10/model-plane-2189142_1280.jpg", // RC plane
       link: "https://example.com/rc-trainer-plane"
     },
     {
@@ -67,7 +67,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Telescope size={40} />,
       technologies: ["Astrophysics", "LaTeX", "Scientific Writing"],
       image:
-        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=250&fit=crop",
+        "https://upload.wikimedia.org/wikipedia/commons/7/7a/COSMOS_3D_dark_matter_map.png", // NASA/ESA dark matter map
       link: "https://example.com/cosmology-dark-matter"
     },
   ];

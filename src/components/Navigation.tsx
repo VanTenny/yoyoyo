@@ -1,162 +1,146 @@
 import React from 'react';
-import { Github, CircuitBoard, Cpu, Bot, Telescope, Plane } from 'lucide-react';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import { Moon, Github, Linkedin, Mail, Menu } from 'lucide-react';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 
-interface ProjectsSectionProps {
+interface NavigationProps {
   darkMode: boolean;
+  toggleDarkMode: () => void;
 }
 
-const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
-  const { ref, isVisible } = useScrollAnimation();
+const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-  const projects = [
-    {
-      title: "Mechanical Impacting System Simulation",
-      description:
-        "Simulated and analyzed the electrical equivalent of a mechanical impacting system, identifying conditions for chaotic behavior and resolving analytical flaws using Python and differential calculus.",
-      icon: <CircuitBoard size={40} />,
-      technologies: ["Python", "Differential Equations", "Data Analysis"],
-      image:
-        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpg", // Mars rover/engineering
-      link: "https://example.com/mechanical-impacting-system"
-    },
-    {
-      title: "LIGO on a Breadboard",
-      description:
-        "Engineered a closed-loop feedback system using Op-amps and phototransistors; designed a proportional controller for robust performance across varying light frequencies.",
-      icon: <Cpu size={40} />,
-      technologies: ["Analog Electronics", "Op-amps", "Control Systems"],
-      image:
-        "https://images.pexels.com/photos/163100/electronics-diy-led-breadboard-163100.jpeg?auto=compress&w=400&h=250&fit=crop", // Breadboard/circuit
-      link: "https://example.com/ligo-breadboard"
-    },
-    {
-      title: "Smart Appliance Infrared Controller",
-      description:
-        "Developed an Arduino-based IR controller with Bluetooth integration, enabling remote operation and storage for multiple devices.",
-      icon: <Github size={40} />,
-      technologies: ["Arduino", "Bluetooth", "Embedded Systems"],
-      image:
-        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpg", // Mars rover/robotic tech
-      link: "https://example.com/infrared-controller"
-    },
-    {
-      title: "Line Following Bot",
-      description:
-        "Built a Bluetooth-controlled line-following robot with IR sensors and rocker-bogie suspension, inspired by Wall-E, and selected for institute-wide exhibition.",
-      icon: <Bot size={40} />,
-      technologies: ["Robotics", "Bluetooth", "Embedded Systems", "IR Sensors"],
-      image:
-        "https://cdn.pixabay.com/photo/2016/03/27/22/22/robot-1284373_1280.jpg", // Wall-E LEGO robot
-      link: "https://example.com/line-following-bot"
-    },
-    {
-      title: "RC Trainer Plane",
-      description:
-        "Designed and constructed a remote-controlled trainer plane, carefully dimensioning control surfaces and integrating electronics. Completed training in flight dynamics and control systems.",
-      icon: <Plane size={40} />,
-      technologies: ["Aerodynamics", "Embedded Systems", "Flight Dynamics", "RC Design"],
-      image:
-        "https://cdn.pixabay.com/photo/2017/03/28/12/10/model-plane-2189142_1280.jpg", // RC plane
-      link: "https://example.com/rc-trainer-plane"
-    },
-    {
-      title: "Cosmology and Dark Matter Report",
-      description:
-        "Authored a comprehensive report on cosmology and dark matter, exploring Big Bang theory, cosmic microwave background, general relativity, and dark matter candidates.",
-      icon: <Telescope size={40} />,
-      technologies: ["Astrophysics", "LaTeX", "Scientific Writing"],
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/7/7a/COSMOS_3D_dark_matter_map.png", // NASA/ESA dark matter map
-      link: "https://example.com/cosmology-dark-matter"
-    },
-  ];
+  const navItems = ['about', 'cv', 'projects', 'achievements', 'gallery', 'contact'];
 
   return (
-    <section 
-      id="projects" 
-      ref={ref}
-      className={`py-20 px-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}
-    >
-      <div className="max-w-7xl mx-auto">
-        <div className={`transition-all duration-1000 transform ${
-          isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
-        }`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-            Featured Projects
-          </h2>
+    <nav className={`fixed top-0 w-full z-50 backdrop-blur-md transition-all duration-300 ${
+      darkMode ? 'bg-gray-900/80 text-white' : 'bg-white/80 text-gray-900'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo/Name */}
+          <div className="flex-shrink-0">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+              Tenzing Jampa
+            </h1>
+          </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <div 
-                key={project.title}
-                className={`group relative overflow-hidden rounded-2xl transition-all duration-500 hover:scale-105 hover:shadow-2xl ${
-                  darkMode ? 'bg-gray-900' : 'bg-white'
-                } ${isVisible ? 'animate-fade-in' : ''}`}
-                style={{ animationDelay: `${index * 200}ms` }}
+          {/* Desktop Navigation */}
+          <div className="hidden lg:block">
+            <div className="ml-10 flex items-baseline space-x-4">
+              {navItems.map((section) => (
+                <button
+                  key={section}
+                  onClick={() => scrollToSection(section)}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
+                    darkMode 
+                      ? 'hover:bg-gray-700 hover:text-cyan-400' 
+                      : 'hover:bg-gray-100 hover:text-blue-600'
+                  }`}
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Social Links, Dark Mode Toggle, and Mobile Menu */}
+          <div className="flex items-center space-x-4">
+            {/* Social Links */}
+            <div className="flex space-x-2">
+              <a
+                href="mailto:22B1808@iitb.ac.in"
+                className="p-2 rounded-full hover:scale-110 transition-transform duration-300"
+                aria-label="Email"
               >
-                <div className="relative overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className={`p-3 rounded-full transition-all duration-300 group-hover:scale-125 group-hover:rotate-12 ${
-                      darkMode 
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white' 
-                        : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
-                    }`}>
-                      {project.icon}
+                <Mail size={20} />
+              </a>
+              <a
+                href="https://github.com/VanTenny"
+                className="p-2 rounded-full hover:scale-110 transition-transform duration-300"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Github size={20} />
+              </a>
+              <a
+                href="https://linkedin.com/in/TenzinZen27"
+                className="p-2 rounded-full hover:scale-110 transition-transform duration-300"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Linkedin size={20} />
+              </a>
+            </div>
+
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className={`p-2 rounded-full transition-all duration-300 hover:scale-110 ${
+                darkMode ? 'bg-gray-700 text-cyan-400' : 'bg-gray-100 text-blue-600'
+              }`}
+              aria-label="Toggle dark mode"
+            >
+              <Moon size={20} />
+            </button>
+
+            {/* Mobile Sidebar Trigger */}
+            <Sheet>
+              <SheetTrigger asChild>
+                <button
+                  className={`lg:hidden p-2 rounded-full transition-all duration-300 hover:scale-110 ${
+                    darkMode ? 'bg-gray-700 text-cyan-400' : 'bg-gray-100 text-blue-600'
+                  }`}
+                  aria-label="Open menu"
+                >
+                  <Menu size={20} />
+                </button>
+              </SheetTrigger>
+              <SheetContent
+                side="right"
+                className={darkMode ? 'bg-gray-900 text-white border-gray-700' : 'bg-white text-gray-900'}
+              >
+                <SheetHeader>
+                  <SheetTitle className={darkMode ? 'text-white' : 'text-gray-900'}>
+                    Navigation
+                  </SheetTitle>
+                  <SheetDescription>
+                    <div className="flex flex-col space-y-4 mt-8">
+                      {navItems.map((section) => (
+                        <button
+                          key={section}
+                          onClick={() => scrollToSection(section)}
+                          className={`px-4 py-3 rounded-md text-left font-medium transition-all duration-300 ${
+                            darkMode 
+                              ? 'hover:bg-gray-700 hover:text-cyan-400' 
+                              : 'hover:bg-gray-100 hover:text-blue-600'
+                          }`}
+                        >
+                          {section.charAt(0).toUpperCase() + section.slice(1)}
+                        </button>
+                      ))}
                     </div>
-                    <h3 className="text-xl font-bold ml-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-600 group-hover:bg-clip-text transition-all duration-300">
-                      {project.title}
-                    </h3>
-                  </div>
-                  
-                  <p className={`mb-4 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                    {project.description}
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech) => (
-                      <span 
-                        key={tech}
-                        className={`px-3 py-1 rounded-full text-xs font-medium ${
-                          darkMode 
-                            ? 'bg-gray-700 text-cyan-400' 
-                            : 'bg-gray-100 text-blue-600'
-                        }`}
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`block w-full py-2 rounded-lg font-medium text-center transition-all duration-300 transform hover:scale-105 ${
-                      darkMode 
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
-                        : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                    }`}
-                  >
-                    View Project
-                  </a>
-                </div>
-              </div>
-            ))}
+                  </SheetDescription>
+                </SheetHeader>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
-    </section>
+    </nav>
   );
 };
 
-export default ProjectsSection;
+export default Navigation;
