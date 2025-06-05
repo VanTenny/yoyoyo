@@ -17,8 +17,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <CircuitBoard size={40} />,
       technologies: ["Python", "Differential Equations", "Data Analysis"],
       image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop", // Engineering/analysis
-      link: "https://example.com/mechanical-impacting-system"
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop",
+      link: "https://github.com/VanTenny/Mechanical-Impacting-Simulation-System/blob/main/Mechanical%20Impacting%20Systems-compressed.pdf"
     },
     {
       title: "LIGO on a Breadboard",
@@ -27,7 +27,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Cpu size={40} />,
       technologies: ["Analog Electronics", "Op-amps", "Control Systems"],
       image:
-        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop", // Breadboard/circuit
+        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop",
       link: "https://example.com/ligo-breadboard"
     },
     {
@@ -37,8 +37,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Github size={40} />,
       technologies: ["Arduino", "Bluetooth", "Embedded Systems"],
       image:
-        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&h=250&fit=crop", // Arduino/IR
-      link: "https://example.com/infrared-controller"
+        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&h=250&fit=crop",
+      link: "https://thiv.notion.site/Final-Report-for-PH-222-Spring-2024-Project-61365b03fb5d447a86708852a27adea0"
     },
     {
       title: "Line Following Bot",
@@ -47,8 +47,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Bot size={40} />,
       technologies: ["Robotics", "Bluetooth", "Embedded Systems", "IR Sensors"],
       image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop", // Wall-E/robotics
-      link: "https://example.com/line-following-bot"
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop"
+      // No link
     },
     {
       title: "RC Trainer Plane",
@@ -57,8 +57,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Plane size={40} />,
       technologies: ["Aerodynamics", "Embedded Systems", "Flight Dynamics", "RC Design"],
       image:
-        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop", // RC plane/flight
-      link: "https://example.com/rc-trainer-plane"
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=250&fit=crop"
+      // No link
     },
     {
       title: "Cosmology and Dark Matter Report",
@@ -67,8 +67,8 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Telescope size={40} />,
       technologies: ["Astrophysics", "LaTeX", "Scientific Writing"],
       image:
-        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=250&fit=crop", // Astronomy/space
-      link: "https://example.com/cosmology-dark-matter"
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=250&fit=crop",
+      link: "https://github.com/VanTenny/cosmology-and-dark-matter-report/blob/main/SOS_Tenzing.pdf"
     },
   ];
 
@@ -137,18 +137,21 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
                     ))}
                   </div>
                   
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`block w-full py-2 rounded-lg font-medium text-center transition-all duration-300 transform hover:scale-105 ${
-                      darkMode 
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
-                        : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                    }`}
-                  >
-                    View Project
-                  </a>
+                  {/* Only render the View Project button if a link exists */}
+                  {'link' in project && project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`block w-full py-2 rounded-lg font-medium text-center transition-all duration-300 transform hover:scale-105 ${
+                        darkMode 
+                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
+                          : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                      }`}
+                    >
+                      View Project
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
