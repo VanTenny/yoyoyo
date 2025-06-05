@@ -28,9 +28,12 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
               isVisible ? 'animate-fade-in delay-300' : ''
             }`}>
               <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                I'm a passionate full-stack developer with a love for creating innovative digital experiences. 
-                My journey in technology has led me to master various programming languages and frameworks, 
-                always staying at the forefront of technological advancement.
+                I'm Tenzing Jampa Bhutia, a final year undergraduate at IIT Bombay majoring in Engineering Physics.
+                My hometown is Kalimpong in West Bengal,India and I am a certified polygot(currently 6 languages).
+                I'm an avid learner and have been highly interested in Condensed Matter Physics and Machine Learning.
+                Furthermore, I will be joining University of Agder(UiA), Norwain the Autumn Semester of the academic year
+                2025-26 as an exchange student.
+            
               </p>
               
               <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
