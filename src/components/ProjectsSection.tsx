@@ -1,4 +1,5 @@
 import React from 'react';
+import RCimg from './components/rc.jpg';
 import { Github, CircuitBoard, Cpu, Bot, Telescope, Plane } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -56,8 +57,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
         "Designed and constructed a remote-controlled trainer plane, carefully dimensioning control surfaces and integrating electronics. Completed training in flight dynamics and control systems.",
       icon: <Plane size={40} />,
       technologies: ["Aerodynamics", "Embedded Systems", "Flight Dynamics", "RC Design"],
-      image:
-        "https://cdn.pixabay.com/photo/2017/03/28/12/10/model-plane-2189142_1280.jpg", // RC plane
+      image: <img src={RCimg} alt="RC Trainer Plane" />, // RC plane
       link: "https://example.com/rc-trainer-plane"
     },
     {
