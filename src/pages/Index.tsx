@@ -51,66 +51,65 @@ const Index = () => {
 
       <ProjectsSection darkMode={darkMode} />
       
-     
-      
       {/* Achievements Section */}
-<section id="achievements" className={`py-20 px-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}>
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-sans">
-      Achievements & Recognition
-    </h2>
-    <div className="grid md:grid-cols-2 gap-8">
-      {[
-        { 
-          title: "Top 1.10% in JEE Main", 
-          description: "Secured a position in the top 1.10% among 0.9 million+ candidates in the JEE Main examination.",
-          icon: "🥇"
-        },
-        { 
-          title: "Top 2.57% in JEE Advanced", 
-          description: "Achieved a top 2.57% rank among 0.15 million+ candidates in the JEE Advanced examination.",
-          icon: "🏅"
-        },
-        { 
-          title: "Institute Exhibition Selection", 
-          description: "Selected as one of the best teams out of 120+ for institute-wide exhibition for the Line Following Bot project at IIT Bombay.",
-          icon: "🎓"
-        },
-        { 
-          title: "Perfect Score in Product Design", 
-          description: "Received a perfect score (10/10) from PhD-level evaluators for all product design projects in the DE344 course.",
-          icon: "🛠️"
-        },
-        { 
-          title: "A+ in Japanese Communication", 
-          description: "Awarded an A+ in a 100-hour Japanese Communication course offered by IIT Bombay's Office of International Relations.",
-          icon: "🈴"
-        },
-        { 
-          title: "Basketball Championship Podium", 
-          description: "Completed a yearlong basketball training at IIT Bombay and secured 3rd place in the Hostel 5 General Championships.",
-          icon: "🏀"
-        }
-      ].map((achievement, index) => (
-        <div key={index} className={`p-8 rounded-xl transition-all duration-300 hover:scale-105 border ${
-          darkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-gray-200'
-        } shadow-lg hover:shadow-xl`}>
-          <div className="flex items-start space-x-4">
-            <div className="text-3xl">{achievement.icon}</div>
-            <div>
-              <h3 className="text-xl font-bold mb-3 font-serif text-blue-500">{achievement.title}</h3>
-              <p className={`${darkMode ? 'text-gray-300' : 'text-gray-600'} leading-relaxed font-light`}>
-                {achievement.description}
-              </p>
-            </div>
+      <section id="achievements" className={`py-20 px-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-serif">
+            Achievements & Recognition
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { 
+                title: "Top 1.10% in JEE Main", 
+                description: "Secured a position in the top 1.10% among 0.9 million+ candidates in the JEE Main examination.",
+                year: "2022"
+              },
+              { 
+                title: "Top 2.57% in JEE Advanced", 
+                description: "Achieved a top 2.57% rank among 0.15 million+ candidates in the JEE Advanced examination.",
+                year: "2022"
+              },
+              { 
+                title: "Institute Exhibition Selection", 
+                description: "Selected as one of the best teams out of 120+ for institute-wide exhibition for the Line Following Bot project at IIT Bombay.",
+                year: "2023"
+              },
+              { 
+                title: "Perfect Score in Product Design", 
+                description: "Received a perfect score (10/10) from PhD-level evaluators for all product design projects in the DE344 course.",
+                year: "2024"
+              },
+              { 
+                title: "A+ in Japanese Communication", 
+                description: "Awarded an A+ in a 100-hour Japanese Communication course offered by IIT Bombay's Office of International Relations.",
+                year: "2024"
+              },
+              { 
+                title: "Basketball Championship Podium", 
+                description: "Completed a yearlong basketball training at IIT Bombay and secured 3rd place in the Hostel 5 General Championships.",
+                year: "2023"
+              }
+            ].map((achievement, index) => (
+              <div key={index} className={`p-6 rounded-lg transition-all duration-300 hover:shadow-lg border ${
+                darkMode ? 'bg-gray-900 border-gray-700 hover:border-gray-600' : 'bg-white border-gray-200 hover:border-gray-300'
+              }`}>
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="text-lg font-semibold text-blue-500 font-sans">{achievement.title}</h3>
+                  <span className={`text-sm px-2 py-1 rounded ${
+                    darkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-600'
+                  }`}>
+                    {achievement.year}
+                  </span>
+                </div>
+                <p className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                  {achievement.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
-      
       {/* Gallery Section */}
       <section id="gallery" className={`py-20 px-4 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
         <div className="max-w-7xl mx-auto">
@@ -132,12 +131,12 @@ const Index = () => {
                 <img 
                   src={image.src} 
                   alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 ${
+                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4 ${
                   darkMode ? 'bg-gradient-to-t from-black/80 to-transparent' : 'bg-gradient-to-t from-black/70 to-transparent'
                 }`}>
-                  <div className="text-white">
+                  <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <h4 className="font-bold text-sm mb-1 font-serif">{image.title}</h4>
                     <p className="text-xs font-light opacity-90">{image.description}</p>
                   </div>
