@@ -45,24 +45,31 @@ const Index = () => {
       
       <AboutSection darkMode={darkMode} />
       
-      {/* CV Section */}
-      <section id="cv" className={`py-20 px-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}>
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-mono">
-            Curriculum Vitae
-          </h2>
-          <p className={`text-lg mb-8 font-light ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-            Download my complete CV to learn more about my professional journey
-          </p>
-          <button className={`px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
-            darkMode 
-              ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
-              : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-          }`}>
-            Download CV
-          </button>
-        </div>
-      </section>
+     {/* CV Section */}
+    <section id="cv" className={`py-20 px-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}>
+    <div className="max-w-6xl mx-auto text-center">
+      <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-mono">
+        Curriculum Vitae
+      </h2>
+      <p className={`text-lg mb-8 font-light ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+      Download my complete CV to learn more about my academic and research journey.
+      </p>
+      <a
+        href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/52026332/3f23ba65-ccb0-450c-a311-e570988185fc/CV_Tenzing.pdf"
+        download="Tenzing_Jampa_Bhutia_CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`inline-block px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
+          darkMode
+            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
+            : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+        }`}
+        >
+        Download CV
+      </a>
+    </div>
+    </section>
+
 
       <ProjectsSection darkMode={darkMode} />
       
