@@ -1,13 +1,18 @@
-
 import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
+import GalleryModal from '../components/GalleryModal';
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    title: string;
+    description: string;
+  } | null>(null);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('darkMode');
@@ -21,6 +26,16 @@ const Index = () => {
     setDarkMode(newDarkMode);
     localStorage.setItem('darkMode', JSON.stringify(newDarkMode));
   };
+
+  const galleryImages = [
+    { src: "/lovable-uploads/29ee7e40-1d52-4035-9d41-fe577728512b.png", title: "Basketball Championship", description: "Secured 3rd place in Hostel 5 General Championships at IIT Bombay" },
+    { src: "/lovable-uploads/fc7c8e77-4241-4360-9e2a-fc2909edc5a9.png", title: "Marathon Achievement", description: "Participating in marathon events with friends and teammates" },
+    { src: "/lovable-uploads/76f776b4-d5ff-4f0f-98f8-e4b2a52d1892.png", title: "Adventure Trip", description: "Exploring new places and creating memories with friends" },
+    { src: "/lovable-uploads/094dd071-8534-4c4c-b731-9b1417dd0418.png", title: "Botanical Garden", description: "Relaxing in the beautiful botanical gardens" },
+    { src: "/lovable-uploads/dbaaa8ba-7a6f-4196-aa66-c8be8f2077db.png", title: "Mountain Adventure", description: "Hiking and exploring mountainous terrains" },
+    { src: "/lovable-uploads/13548499-53f1-42f5-b9c4-21774e0afef6.png", title: "Cultural Exploration", description: "Visiting historic sites and cultural landmarks" },
+    { src: "/lovable-uploads/0772ca7f-9177-4e03-ae83-76db7bf4215f.png", title: "Social Gatherings", description: "Enjoying time with friends and classmates" }
+  ];
 
   return (
     <div className={`${darkMode ? 'dark' : ''}`}>
@@ -117,16 +132,12 @@ const Index = () => {
             Gallery
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              { src: "/lovable-uploads/29ee7e40-1d52-4035-9d41-fe577728512b.png", title: "Basketball Championship", description: "Secured 3rd place in Hostel 5 General Championships at IIT Bombay" },
-              { src: "/lovable-uploads/fc7c8e77-4241-4360-9e2a-fc2909edc5a9.png", title: "Marathon Achievement", description: "Participating in marathon events with friends and teammates" },
-              { src: "/lovable-uploads/76f776b4-d5ff-4f0f-98f8-e4b2a52d1892.png", title: "Adventure Trip", description: "Exploring new places and creating memories with friends" },
-              { src: "/lovable-uploads/094dd071-8534-4c4c-b731-9b1417dd0418.png", title: "Botanical Garden", description: "Relaxing in the beautiful botanical gardens" },
-              { src: "/lovable-uploads/dbaaa8ba-7a6f-4196-aa66-c8be8f2077db.png", title: "Mountain Adventure", description: "Hiking and exploring mountainous terrains" },
-              { src: "/lovable-uploads/13548499-53f1-42f5-b9c4-21774e0afef6.png", title: "Cultural Exploration", description: "Visiting historic sites and cultural landmarks" },
-              { src: "/lovable-uploads/0772ca7f-9177-4e03-ae83-76db7bf4215f.png", title: "Social Gatherings", description: "Enjoying time with friends and classmates" }
-            ].map((image, index) => (
-              <div key={index} className="aspect-square overflow-hidden rounded-xl group relative">
+            {galleryImages.map((image, index) => (
+              <div 
+                key={index} 
+                className="aspect-square overflow-hidden rounded-xl group relative cursor-pointer"
+                onClick={() => setSelectedImage(image)}
+              >
                 <img 
                   src={image.src} 
                   alt={image.title}
@@ -152,6 +163,18 @@ const Index = () => {
       <footer className={`py-8 text-center font-light ${darkMode ? 'bg-gray-900 text-gray-300' : 'bg-gray-800 text-gray-300'}`}>
         <p>&copy; 2024 Tenzing Jampa. All rights reserved.</p>
       </footer>
+
+      {/* Gallery Modal */}
+      {selectedImage && (
+        <GalleryModal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          imageSrc={selectedImage.src}
+          imageTitle={selectedImage.title}
+          imageDescription={selectedImage.description}
+          darkMode={darkMode}
+        />
+      )}
     </div>
   );
 };
