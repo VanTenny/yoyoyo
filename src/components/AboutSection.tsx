@@ -65,11 +65,14 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
                   Quick Facts
                 </h3>
                 <ul className={`space-y-3 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                  <li>🎓 Computer Science Graduate</li>
-                  <li>💼 5+ Years of Experience</li>
-                  <li>🌍 Based in Nepal</li>
-                  <li>☕ Coffee Enthusiast</li>
-                  <li>🎯 Always Learning</li>
+                  <li>🎓 Junior Undergraduate, Engineering Physics (Hons), IIT Bombay</li>
+                  <li>🔬 Research Interests: Condensed Matter Physics, Astronomy, Non-linear Systems</li>
+                  <li>🏅 Top 1.10% JEE Main | Top 2.57% JEE Advanced</li>
+                  <li>🌏 Tibetan | Fluent in English, Hindi, Nepali, Tibetan, Japanese</li>
+                  <li>💡 Minor in Entrepreneurship</li>
+                  <li>🏀 Fitness & Basketball Enthusiast</li>
+                  <li>📍 Based in Mumbai, India</li>
+                  <li>📚 Always Learning & Exploring New Technologies</li>
                 </ul>
               </div>
             </div>
