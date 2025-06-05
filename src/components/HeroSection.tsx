@@ -30,7 +30,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
           <img 
             src="/lovable-uploads/761d0f96-4c17-40b4-b1a2-8f93956a205b.png"
             alt="Tenzing Jampa"
-            className="w-48 h-48 rounded-full mx-auto border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl hover:scale-105 transition-transform duration-500 object-cover object-center"
+            className="w-48 h-48 rounded-full mx-auto border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl hover:scale-105 transition-transform duration-500 object-cover object-top"
+            style={{ objectPosition: '50% 20%' }}
           />
         </div>
         
