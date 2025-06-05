@@ -18,7 +18,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       technologies: ["Python", "Differential Equations", "Data Analysis"],
       image:
         "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop",
-      link: "https://example.com/mechanical-impacting-system"
+      link: "https://github.com/VanTenny/Mechanical-Impacting-Simulation-System/blob/main/Mechanical%20Impacting%20Systems-compressed.pdf"
     },
     {
       title: "LIGO on a Breadboard",
