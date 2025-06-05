@@ -118,14 +118,13 @@ const Index = () => {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=300&h=300&fit=crop", title: "AI Development", description: "Working on machine learning algorithms and neural networks" },
-              { src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=300&fit=crop", title: "Code Matrix", description: "Deep diving into complex programming challenges" },
-              { src: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=300&h=300&fit=crop", title: "Web Development", description: "Creating responsive and interactive web applications" },
-              { src: "https://images.unsplash.com/photo-1470813740244-df37b8c1edcb?w=300&h=300&fit=crop", title: "Tech Conference", description: "Speaking at technology conferences and meetups" },
-              { src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=300&h=300&fit=crop", title: "Laptop Coding", description: "Late night coding sessions and project development" },
-              { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&h=300&fit=crop", title: "Data Science", description: "Analyzing data patterns and creating visualizations" },
-              { src: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=300&fit=crop", title: "Software Architecture", description: "Designing scalable software systems and architecture" },
-              { src: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=300&h=300&fit=crop", title: "Professional Photo", description: "Professional headshot for conferences and presentations" }
+              { src: "/lovable-uploads/29ee7e40-1d52-4035-9d41-fe577728512b.png", title: "Basketball Championship", description: "Secured 3rd place in Hostel 5 General Championships at IIT Bombay" },
+              { src: "/lovable-uploads/fc7c8e77-4241-4360-9e2a-fc2909edc5a9.png", title: "Marathon Achievement", description: "Participating in marathon events with friends and teammates" },
+              { src: "/lovable-uploads/76f776b4-d5ff-4f0f-98f8-e4b2a52d1892.png", title: "Adventure Trip", description: "Exploring new places and creating memories with friends" },
+              { src: "/lovable-uploads/094dd071-8534-4c4c-b731-9b1417dd0418.png", title: "Botanical Garden", description: "Relaxing in the beautiful botanical gardens" },
+              { src: "/lovable-uploads/dbaaa8ba-7a6f-4196-aa66-c8be8f2077db.png", title: "Mountain Adventure", description: "Hiking and exploring mountainous terrains" },
+              { src: "/lovable-uploads/13548499-53f1-42f5-b9c4-21774e0afef6.png", title: "Cultural Exploration", description: "Visiting historic sites and cultural landmarks" },
+              { src: "/lovable-uploads/0772ca7f-9177-4e03-ae83-76db7bf4215f.png", title: "Social Gatherings", description: "Enjoying time with friends and classmates" }
             ].map((image, index) => (
               <div key={index} className="aspect-square overflow-hidden rounded-xl group relative">
                 <img 
