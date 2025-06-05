@@ -30,16 +30,12 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
               <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                 I'm Tenzing Jampa Bhutia, a final year undergraduate at IIT Bombay majoring in Engineering Physics.
                 My hometown is Kalimpong in West Bengal,India and I am a certified polygot(currently 6 languages).
-                I'm an avid learner and have been highly interested in Condensed Matter Physics and Machine Learning.
-                Furthermore, I will be joining University of Agder(UiA), Norwain the Autumn Semester of the academic year
-                2025-26 as an exchange student.
-            
               </p>
               
               <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
-                or sharing knowledge with the developer community. I believe in the power of technology to solve 
-                real-world problems and create meaningful impact.
+                I'm an avid learner and have been highly interested in Condensed Matter Physics and Machine Learning.
+                Furthermore, I will be joining University of Agder(UiA), Norwain the Autumn Semester of the academic year
+                2025-26 as an exchange student.
               </p>
               
               <div className="flex flex-wrap gap-3 mt-8">

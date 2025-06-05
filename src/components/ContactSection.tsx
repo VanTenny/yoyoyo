@@ -11,11 +11,12 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
   const { ref, isVisible } = useScrollAnimation();
 
   const contactInfo = [
-    { icon: <Mail size={24} />, label: "Email", value: "tenzing.jampa@email.com", href: "mailto:tenzing.jampa@email.com" },
-    { icon: <Phone size={24} />, label: "Phone", value: "+977-9876543210", href: "tel:+9779876543210" },
-    { icon: <Github size={24} />, label: "GitHub", value: "github.com/tenzingjampa", href: "https://github.com" },
-    { icon: <Linkedin size={24} />, label: "LinkedIn", value: "linkedin.com/in/tenzingjampa", href: "https://linkedin.com" },
-    { icon: <Instagram size={24} />, label: "Instagram", value: "@tenzing_jampa", href: "https://instagram.com" }
+    { icon: <Mail size={24} />, label: "Official", value: "22B1808@iitb.ac.in", href: "mailto:22B1808@iitb.ac.in" },
+    { icon: <Mail size={24} />, label: "Personal", value: "jampatenzin280@gmail.com", href: "mailto:jampatenzin280@gmail.com" }
+    { icon: <Phone size={24} />, label: "Phone", value: "+918016037894", href: "tel:+918016037894" },
+    { icon: <Github size={24} />, label: "GitHub", value: "github.com/VanTenny", href: "https://github.com/VanTenny" },
+    { icon: <Linkedin size={24} />, label: "LinkedIn", value: "linkedin.com/in/TenzinZen27", href: "https://linkedin.com/in/linkedin.com/in/TenzinZen27" },
+    { icon: <Instagram size={24} />, label: "Instagram", value: "@shin_no.koe", href: "https://www.instagram.com/shin_no.koe/" }
   ];
 
   return (
@@ -38,8 +39,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
                 <h3 className="text-2xl font-bold mb-4">Let's Connect!</h3>
                 <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                   I'm always open to discussing new opportunities, interesting projects, 
-                  or just having a chat about technology. Feel free to reach out through 
-                  any of the channels below.
+                  or just having a chat about physics or technology. Feel free to reach out.
                 </p>
               </div>
               
