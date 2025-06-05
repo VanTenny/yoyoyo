@@ -27,7 +27,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Cpu size={40} />,
       technologies: ["Analog Electronics", "Op-amps", "Control Systems"],
       image:
-        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop",
+        "https://media.istockphoto.com/id/1130499735/photo/electronic-breadboard-with-components.jpg?s=612x612&w=0&k=20&c=2rZy9Q5k9Qy3C6gZLw8n8Xk6kQwQ2EwV9nQ6Qk9Q6Qk=",
       link: "https://example.com/ligo-breadboard"
     },
     {
@@ -37,7 +37,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Github size={40} />,
       technologies: ["Arduino", "Bluetooth", "Embedded Systems"],
       image:
-        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&h=250&fit=crop",
+        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpg",
       link: "https://example.com/infrared-controller"
     },
     {
@@ -47,7 +47,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Bot size={40} />,
       technologies: ["Robotics", "Bluetooth", "Embedded Systems", "IR Sensors"],
       image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop",
+        "https://cdn.pixabay.com/photo/2017/01/20/00/30/space-1990185_1280.jpghttps://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop",
       link: "https://example.com/line-following-bot"
     },
     {
@@ -57,7 +57,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       icon: <Plane size={40} />,
       technologies: ["Aerodynamics", "Embedded Systems", "Flight Dynamics", "RC Design"],
       image:
-        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop", // RC plane image
+        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crophttps://images.pexels.com/photos/461382/pexels-photo-461382.jpeg?auto=compress&w=400&h=250&fit=crop", // RC plane image
       link: "https://example.com/rc-trainer-plane"
     },
     {
