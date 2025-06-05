@@ -12,7 +12,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
 
   const contactInfo = [
     { icon: <Mail size={24} />, label: "Official", value: "22B1808@iitb.ac.in", href: "mailto:22B1808@iitb.ac.in" },
-    { icon: <Mail size={24} />, label: "Personal", value: "jampatenzin280@gmail.com", href: "mailto:jampatenzin280@gmail.com" }
+    { icon: <Mail size={24} />, label: "Personal", value: "jampatenzin280@gmail.com", href: "mailto:jampatenzin280@gmail.com" },
     { icon: <Phone size={24} />, label: "Phone", value: "+918016037894", href: "tel:+918016037894" },
     { icon: <Github size={24} />, label: "GitHub", value: "github.com/VanTenny", href: "https://github.com/VanTenny" },
     { icon: <Linkedin size={24} />, label: "LinkedIn", value: "linkedin.com/in/TenzinZen27", href: "https://linkedin.com/in/linkedin.com/in/TenzinZen27" },
