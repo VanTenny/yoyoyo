@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, CircuitBoard, Cpu, Bot, Telescope } from 'lucide-react';
+import { Github, CircuitBoard, Cpu, Bot, Telescope, Plane } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface ProjectsSectionProps {
@@ -41,14 +41,24 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       link: "https://example.com/infrared-controller"
     },
     {
-      title: "Line Following Bot & RC Trainer Plane",
+      title: "Line Following Bot",
       description:
-        "Built a Bluetooth-controlled line-following robot with IR sensors and rocker-bogie suspension; designed and constructed a remote-controlled trainer plane focusing on flight dynamics and control systems.",
+        "Built a Bluetooth-controlled line-following robot with IR sensors and rocker-bogie suspension; selected as one of the best teams for an institute-wide exhibition.",
       icon: <Bot size={40} />,
-      technologies: ["Robotics", "Bluetooth", "Embedded Systems", "Aerodynamics"],
+      technologies: ["Robotics", "Bluetooth", "Embedded Systems", "IR Sensors"],
       image:
         "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop",
       link: "https://example.com/line-following-bot"
+    },
+    {
+      title: "RC Trainer Plane",
+      description:
+        "Designed and constructed a remote-controlled trainer plane, carefully dimensioning control surfaces and integrating a LiPo battery, transmitter, servo motors, BLDC motor, and ESCs. Completed training in flight dynamics and control systems through simulation and hands-on sessions.",
+      icon: <Plane size={40} />,
+      technologies: ["Aerodynamics", "Embedded Systems", "Flight Dynamics", "RC Design"],
+      image:
+        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop", // RC plane image
+      link: "https://example.com/rc-trainer-plane"
     },
     {
       title: "Cosmology and Dark Matter Report",
