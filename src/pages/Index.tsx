@@ -55,7 +55,7 @@ const Index = () => {
       Download my complete CV to learn more about my academic and research journey.
       </p>
       <a
-        href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/52026332/3f23ba65-ccb0-450c-a311-e570988185fc/CV_Tenzing.pdf"
+        href="https://github.com/VanTenny/CV/blob/main/CV_Tenzing.pdf"
         download="Tenzing_Jampa_Bhutia_CV.pdf"
         target="_blank"
         rel="noopener noreferrer"
