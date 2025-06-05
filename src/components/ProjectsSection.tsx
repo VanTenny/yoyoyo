@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, CircuitBoard, Cpu, Bot, Telescope, BookOpen } from 'lucide-react';
+import { Github, CircuitBoard, Cpu, Bot, Telescope } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface ProjectsSectionProps {
@@ -14,46 +14,51 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
       title: "Mechanical Impacting System Simulation",
       description:
         "Simulated and analyzed the electrical equivalent of a mechanical impacting system, identifying conditions for chaotic behavior and resolving analytical flaws using Python and differential calculus.",
-      icon: <CircuitBoard size={40} />, // Circuit board for systems modeling
+      icon: <CircuitBoard size={40} />,
       technologies: ["Python", "Differential Equations", "Data Analysis"],
       image:
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop", // Engineering/analysis
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&h=250&fit=crop",
+      link: "https://example.com/mechanical-impacting-system"
     },
     {
       title: "LIGO on a Breadboard",
       description:
         "Engineered a closed-loop feedback system using Op-amps and phototransistors; designed a proportional controller for robust performance across varying light frequencies.",
-      icon: <Cpu size={40} />, // CPU for electronics/feedback
+      icon: <Cpu size={40} />,
       technologies: ["Analog Electronics", "Op-amps", "Control Systems"],
       image:
-        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop", // Breadboard/electronics
+        "https://images.unsplash.com/photo-1464983953574-0892a716854b?w=400&h=250&fit=crop",
+      link: "https://example.com/ligo-breadboard"
     },
     {
       title: "Smart Appliance Infrared Controller",
       description:
         "Developed an Arduino-based IR controller with Bluetooth integration, enabling remote operation and storage for multiple devices.",
-      icon: <Github size={40} />, // Github for code/hardware
+      icon: <Github size={40} />,
       technologies: ["Arduino", "Bluetooth", "Embedded Systems"],
       image:
-        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&h=250&fit=crop", // Arduino/IR
+        "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=400&h=250&fit=crop",
+      link: "https://example.com/infrared-controller"
     },
     {
       title: "Line Following Bot & RC Trainer Plane",
       description:
         "Built a Bluetooth-controlled line-following robot with IR sensors and rocker-bogie suspension; designed and constructed a remote-controlled trainer plane focusing on flight dynamics and control systems.",
-      icon: <Bot size={40} />, // Bot for robotics
+      icon: <Bot size={40} />,
       technologies: ["Robotics", "Bluetooth", "Embedded Systems", "Aerodynamics"],
       image:
-        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop", // Robotics/plane
+        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=400&h=250&fit=crop",
+      link: "https://example.com/line-following-bot"
     },
     {
       title: "Cosmology and Dark Matter Report",
       description:
         "Authored a comprehensive report on cosmology and dark matter, exploring Big Bang theory, cosmic microwave background, general relativity, and dark matter candidates.",
-      icon: <Telescope size={40} />, // Telescope for astrophysics
+      icon: <Telescope size={40} />,
       technologies: ["Astrophysics", "LaTeX", "Scientific Writing"],
       image:
-        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=250&fit=crop", // Astronomy/space
+        "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=400&h=250&fit=crop",
+      link: "https://example.com/cosmology-dark-matter"
     },
   ];
 
@@ -122,13 +127,18 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
                     ))}
                   </div>
                   
-                  <button className={`w-full py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 ${
-                    darkMode 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
-                      : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                  }`}>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block w-full py-2 rounded-lg font-medium text-center transition-all duration-300 transform hover:scale-105 ${
+                      darkMode 
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
+                        : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                    }`}
+                  >
                     View Project
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
