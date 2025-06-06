@@ -34,7 +34,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
               
               <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                 I'm an avid learner and have been highly interested in Condensed Matter Physics and Machine Learning.
-                Furthermore, I will be joining University of Agder(UiA), Norwain the Autumn Semester of the academic year
+                Furthermore, I will be joining University of Agder(UiA), Norway in the Autumn Semester of the academic year
                 2025-26 as an exchange student.
               </p>
               
