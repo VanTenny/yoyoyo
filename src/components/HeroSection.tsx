@@ -46,12 +46,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
             Final Year Undergraduate at <span className="font-semibold text-blue-400">IIT Bombay</span>
           </p>
           <p className="text-lg md:text-xl mb-6 text-gray-200">
-            Majoring in <span className="font-semibold text-purple-400">Engineering Physics</span>
+            Majoring in <span className="font-semibold text-purple-400">Engineering Physics with Honors</span>
           </p>
         </div>
         
         <p className="text-xl md:text-2xl mb-8 animate-fade-in delay-500 text-gray-200">
-            Researcher and a Fitness Enthusiast
+            Researcher, Learner and a Fitness Enthusiast
         </p>
         
         <div className="animate-fade-in delay-700">
