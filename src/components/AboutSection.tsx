@@ -28,7 +28,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
               isVisible ? 'animate-fade-in delay-300' : ''
             }`}>
               <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-                I'm Tenzing Jampa Bhutia, a final year undergraduate at IIT Bombay majoring in Engineering Physics.
+                I'm Tenzing Jampa Bhutia, a final year undergraduate at IIT Bombay majoring in Engineering Physics with Honors.
                 My hometown is Kalimpong in West Bengal,India and I am a certified polygot(currently 6 languages).
               </p>
               
@@ -68,7 +68,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
                   <li>🎓 Junior Undergraduate, Engineering Physics, IIT Bombay</li>
                   <li>🔬 Research Interests: Condensed Matter Physics, Astronomy, Non-linear Systems</li>
                   <li>🏅 Top 1.10% JEE Main | Top 2.57% JEE Advanced</li>
-                  <li>🌏 Tibetan | Fluent in English, Hindi, Nepali, Tibetan, Japanese</li>
+                  <li>🌏 Tibetan | Fluent in English, Hindi, Nepali, Tibetan, Japanese,</li>
                   <li>🏀 Fitness & Basketball Enthusiast</li>
                   <li>📍 Based in Mumbai, India</li>
                   <li>📚 Always Learning & Exploring New Technologies</li>
