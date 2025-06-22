@@ -99,7 +99,7 @@ const Index = () => {
               { 
                 title: "Perfect Score in Product Design", 
                 description: "Received a perfect score (10/10) from PhD-level evaluators for all product design projects in the DE344 course.",
-                year: "2024"
+                year: "2025"
               },
               { 
                 title: "A+ in Japanese Communication", 
@@ -109,7 +109,7 @@ const Index = () => {
               { 
                 title: "Basketball Championship Podium", 
                 description: "Completed a yearlong basketball training at IIT Bombay and secured 3rd place in the Hostel 5 General Championships.",
-                year: "2023"
+                year: "2025"
               }
             ].map((achievement, index) => (
               <div key={index} className={`p-6 rounded-lg transition-all duration-300 hover:shadow-lg border ${
