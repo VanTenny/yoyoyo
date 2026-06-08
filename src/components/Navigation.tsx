@@ -110,23 +110,19 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
               </SheetTrigger>
               <SheetContent
                 side="right"
-                className={darkMode ? 'bg-gray-900 text-white border-gray-700' : 'bg-white text-gray-900'}
+                className="bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white border-l border-gray-700/50 backdrop-blur-xl"
               >
                 <SheetHeader>
-                  <SheetTitle className={darkMode ? 'text-white' : 'text-gray-900'}>
+                  <SheetTitle className="bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-serif text-2xl text-left">
                     Navigation
                   </SheetTitle>
-                  <SheetDescription>
-                    <div className="flex flex-col space-y-4 mt-8">
+                  <SheetDescription asChild>
+                    <div className="flex flex-col space-y-2 mt-8">
                       {navItems.map((section) => (
                         <button
                           key={section}
                           onClick={() => scrollToSection(section)}
-                          className={`px-4 py-3 rounded-md text-left font-medium transition-all duration-300 ${
-                            darkMode 
-                              ? 'hover:bg-gray-700 hover:text-gray-200' 
-                              : 'hover:bg-gray-100 hover:text-white'
-                          }`}
+                          className="px-4 py-3 rounded-lg text-left font-medium text-gray-200 border border-transparent hover:border-gray-600/50 hover:bg-gradient-to-r hover:from-gray-800/80 hover:to-gray-900/40 hover:text-white hover:translate-x-1 transition-all duration-300"
                         >
                           {section.charAt(0).toUpperCase() + section.slice(1)}
                         </button>
