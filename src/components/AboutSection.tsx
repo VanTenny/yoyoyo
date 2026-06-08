@@ -27,7 +27,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
               <p className={`text-lg leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
                 I'm Tenzing, a final-year Engineering Physics student at IIT Bombay, originally from
                 Kalimpong in the eastern Himalayas. My work tends to sit at the intersection of
-                physics and computation — whether that's modelling polymer chains, simulating wind
+                physics and computation whether that's modelling polymer chains, simulating wind
                 turbine drive trains, or training RL agents.
               </p>
 
