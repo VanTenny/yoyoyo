@@ -7,7 +7,7 @@ import ContactSection from '../components/ContactSection';
 import GalleryModal from '../components/GalleryModal';
 
 const Index = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [selectedImage, setSelectedImage] = useState<{
     src: string;
     title: string;
@@ -16,7 +16,7 @@ const Index = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('darkMode');
-    if (savedTheme) {
+    if (savedTheme !== null) {
       setDarkMode(JSON.parse(savedTheme));
     }
   }, []);

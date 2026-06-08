@@ -12,7 +12,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/lovable-uploads/6d01476a-c61c-431a-93b3-eed392e50c3f.png')`
+          backgroundImage: `url('/lovable-uploads/hero-smoke.jpg')`
         }}
       >
         {/* Dark overlay for better text readability */}
@@ -21,8 +21,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
 
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gray-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
       
       <div className="relative z-10 text-center px-4">
@@ -43,10 +43,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
         
         <div className="mb-8 animate-fade-in delay-400">
           <p className="text-lg md:text-xl mb-2 text-gray-200">
-            Final Year Undergraduate at <span className="font-semibold text-blue-400">IIT Bombay</span>
+            Final Year Undergraduate at <span className="font-semibold text-white">IIT Bombay</span>
           </p>
           <p className="text-lg md:text-xl mb-6 text-gray-200">
-            Majoring in <span className="font-semibold text-purple-400">Engineering Physics</span>
+            Majoring in <span className="font-semibold text-gray-300">Engineering Physics</span>
           </p>
         </div>
         

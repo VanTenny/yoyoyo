@@ -13,7 +13,7 @@ const projects = [
     description:
       "Built a high-fidelity MATLAB/Simulink model of a 2MW wind turbine drive train, implementing a five-interval control strategy to regulate rotor speed across wind conditions from 0 to 25 m/s. Modelled generator torque and hydraulic pitch servo dynamics, and verified robustness through transient ramp and step-jump simulations.",
     technologies: ["MATLAB", "Simulink", "Simscape", "Control Systems"],
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/4C_offshore_wind_farm.jpg/1280px-4C_offshore_wind_farm.jpg",
+    image: "/lovable-uploads/thumb-windturbine.jpg",
     link: null,
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     description:
       "Derived scaling laws for freely jointed, freely rotating, and worm-like chain architectures. Applied Flory mean-field theory and the thermal blob model to map the transition from ideal Gaussian to swollen coil states, then wrote computational simulations confirming the R ~ N³/⁵ exponent for self-avoiding walks.",
     technologies: ["Statistical Physics", "Python", "Monte Carlo", "Scaling Theory"],
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Ideal_chain_random_walk.svg/800px-Ideal_chain_random_walk.svg.png",
+    image: "/lovable-uploads/thumb-polymer.jpg",
     link: null,
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     description:
       "Reproduced and extended a published paper on the electrical equivalent of a 1-DOF mechanical impacting system. Identified the correct conditions for the period-1 → chaos → period-2 bifurcation sequence, and resolved a flaw in the original analysis using Python-generated phase plots and differential calculus.",
     technologies: ["Python", "LTspice", "Nonlinear Dynamics", "Bifurcation Analysis"],
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Lorenz_attractor_yb.svg/1200px-Lorenz_attractor_yb.svg.png",
+    image: "/lovable-uploads/thumb-chaos.jpg",
     link: "https://github.com/VanTenny/Mechanical-Impacting-Simulation-System/blob/main/Mechanical%20Impacting%20Systems-compressed.pdf",
   },
   {
@@ -40,7 +40,7 @@ const projects = [
     description:
       "Implemented and compared Q-Learning, PPO, DDPG, and SAC algorithms on a simulated highway environment. The project was an 8-week structured programme — good for getting hands-on with RL from scratch rather than just reading about it.",
     technologies: ["Python", "PyTorch", "PPO", "DDPG", "SAC", "OpenAI Gym"],
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Self_driving_car.jpg/1280px-Self_driving_car.jpg",
+    image: "/lovable-uploads/thumb-rl.jpg",
     link: null,
   },
   {
@@ -49,7 +49,7 @@ const projects = [
     description:
       "An 8-week deep-dive into foundational and frontier cosmology: Big Bang theory, CMB as observational evidence, general relativity in cosmological models, and the landscape of dark matter candidates — WIMPs, axions, and sterile neutrinos. Written in LaTeX with figures and derivations throughout.",
     technologies: ["Astrophysics", "General Relativity", "LaTeX", "Scientific Writing"],
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Planck_CMB.jpg/1280px-Planck_CMB.jpg",
+    image: "/lovable-uploads/thumb-cosmology.jpg",
     link: "https://github.com/VanTenny/cosmology-and-dark-matter-report/blob/main/SOS_Tenzing.pdf",
   },
 ];
