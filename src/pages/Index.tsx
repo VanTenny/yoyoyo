@@ -28,7 +28,7 @@ const Index = () => {
   };
 
   const galleryImages = [
-    { src: "/lovable-uploads/29ee7e40-1d52-4035-9d41-fe577728512b.png", title: "Basketball Championship", description: "Secured 2nd place in Hostel 5 General Championships at IIT Bombay" },
+    { src: "/lovable-uploads/29ee7e40-1d52-4035-9d41-fe577728512b.png", title: "Basketball Championship", description: "Secured 3rd place in Hostel 5 General Championships at IIT Bombay" },
     { src: "/lovable-uploads/fc7c8e77-4241-4360-9e2a-fc2909edc5a9.png", title: "Marathon Achievement", description: "Participating in my first 5K Run organized by Avhaan IITB" },
     { src: "/lovable-uploads/76f776b4-d5ff-4f0f-98f8-e4b2a52d1892.png", title: "Hiking", description: "At the summit of Rajgad fort, Maharashtra with my friends" },
     { src: "/lovable-uploads/094dd071-8534-4c4c-b731-9b1417dd0418.png", title: "Botanical Garden", description: "Just me chilling" },
@@ -38,47 +38,65 @@ const Index = () => {
   ];
 
   return (
-    <div className={`${darkMode ? 'dark' : ''}`}>
+    <div className={`transition-colors duration-700 min-h-screen ${darkMode ? 'dark bg-black text-white' : 'bg-white text-black'}`}>
       <Navigation darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       
       <HeroSection darkMode={darkMode} />
       
       <AboutSection darkMode={darkMode} />
       
-     {/* CV Section */}
-    <section id="cv" className={`py-20 px-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}>
-    <div className="max-w-6xl mx-auto text-center">
-      <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-mono">
-        Curriculum Vitae
-      </h2>
-      <p className={`text-lg mb-8 font-light ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-      Download my complete CV to learn more about my academic and research journey.
-      </p>
-      <a
-        href="https://github.com/VanTenny/CV/blob/main/CV_Tenzing.pdf"
-        download="Tenzing_Jampa_Bhutia_CV.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`inline-block px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
-          darkMode
-            ? 'bg-gradient-to-r from-gray-100 to-gray-400 text-white hover:from-gray-200 hover:to-gray-400'
-            : 'bg-gradient-to-r from-white to-gray-400 text-white hover:from-gray-100 hover:to-gray-300'
+      {/* Sleek B&W CV Section */}
+      <section 
+        id="cv" 
+        className={`py-24 px-4 border-t transition-colors duration-700 ${
+          darkMode ? 'bg-black border-neutral-900 text-white' : 'bg-white border-neutral-100 text-black'
         }`}
-        >
-        Download CV
-      </a>
-    </div>
-    </section>
-
+      >
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 font-serif tracking-tight">
+            <span className={`bg-clip-text text-transparent bg-gradient-to-b ${
+              darkMode ? 'from-white to-neutral-500' : 'from-black to-neutral-500'
+            }`}>
+              Curriculum Vitae
+            </span>
+          </h2>
+          <p className={`text-lg mb-10 font-light max-w-md mx-auto tracking-wide ${darkMode ? 'text-neutral-400' : 'text-neutral-600'}`}>
+            Download my complete academic portfolio detailing research milestones and computing experience.
+          </p>
+          <a
+            href="https://github.com/VanTenny/CV/blob/main/CV_Tenzing.pdf"
+            download="Tenzing_Jampa_Bhutia_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`inline-block px-8 py-4 rounded-full font-mono text-sm tracking-wider uppercase transition-all duration-300 transform hover:scale-105 ${
+              darkMode
+                ? 'bg-white text-black hover:bg-neutral-200 hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]'
+                : 'bg-black text-white hover:bg-neutral-800 hover:shadow-[0_0_30px_rgba(0,0,0,0.15)]'
+            }`}
+          >
+            Download CV
+          </a>
+        </div>
+      </section>
 
       <ProjectsSection darkMode={darkMode} />
       
-      {/* Achievements Section */}
-      <section id="achievements" className={`py-20 px-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}>
+      {/* High-Contrast Achievements Section */}
+      <section 
+        id="achievements" 
+        className={`py-24 px-4 border-t transition-colors duration-700 ${
+          darkMode ? 'bg-black border-neutral-900 text-white' : 'bg-white border-neutral-100 text-black'
+        }`}
+      >
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-serif">
-            Achievements & Recognition
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 font-serif tracking-tight">
+            <span className={`bg-clip-text text-transparent bg-gradient-to-b ${
+              darkMode ? 'from-white via-neutral-200 to-neutral-500' : 'from-black via-neutral-700 to-neutral-400'
+            }`}>
+              Achievements & Recognition
+            </span>
           </h2>
+          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { 
@@ -112,18 +130,25 @@ const Index = () => {
                 year: "2025"
               }
             ].map((achievement, index) => (
-              <div key={index} className={`p-6 rounded-lg transition-all duration-300 hover:shadow-lg border ${
-                darkMode ? 'bg-gray-900 border-gray-700 hover:border-gray-600' : 'bg-white border-gray-200 hover:border-gray-300'
-              }`}>
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-lg font-semibold text-gray-100 font-sans">{achievement.title}</h3>
-                  <span className={`text-sm px-2 py-1 rounded ${
-                    darkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-600'
+              <div 
+                key={index} 
+                className={`p-8 rounded-xl transition-all duration-500 hover:scale-[1.02] border backdrop-blur-md ${
+                  darkMode 
+                    ? 'bg-white/[0.01] border-white/10 hover:border-white/30 hover:bg-white/[0.03]' 
+                    : 'bg-black/[0.01] border-black/10 hover:border-black/30 hover:bg-black/[0.03]'
+                }`}
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className={`text-lg font-serif font-bold tracking-tight ${darkMode ? 'text-white' : 'text-black'}`}>
+                    {achievement.title}
+                  </h3>
+                  <span className={`text-xs font-mono px-2 py-1 rounded border tracking-wider ${
+                    darkMode ? 'bg-white/5 border-white/10 text-neutral-300' : 'bg-black/5 border-black/10 text-neutral-600'
                   }`}>
                     {achievement.year}
                   </span>
                 </div>
-                <p className={`text-sm leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
+                <p className={`text-sm font-light leading-relaxed tracking-wide ${darkMode ? 'text-neutral-400' : 'text-neutral-600'}`}>
                   {achievement.description}
                 </p>
               </div>
@@ -132,30 +157,41 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section id="gallery" className={`py-20 px-4 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
+      {/* Cinematic Image Gallery Section */}
+      <section 
+        id="gallery" 
+        className={`py-24 px-4 border-t transition-colors duration-700 ${
+          darkMode ? 'bg-black border-neutral-900 text-white' : 'bg-white border-neutral-100 text-black'
+        }`}
+      >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-mono">
-            Gallery
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 font-serif tracking-tight">
+            <span className={`bg-clip-text text-transparent bg-gradient-to-b ${
+              darkMode ? 'from-white to-neutral-500' : 'from-black to-neutral-500'
+            }`}>
+              Gallery
+            </span>
           </h2>
+          
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {galleryImages.map((image, index) => (
               <div 
                 key={index} 
-                className="aspect-square overflow-hidden rounded-xl group relative cursor-pointer"
+                className={`aspect-square overflow-hidden rounded-lg group relative cursor-pointer border ${
+                  darkMode ? 'border-white/5' : 'border-black/5'
+                }`}
                 onClick={() => setSelectedImage(image)}
               >
                 <img 
                   src={image.src} 
                   alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4 ${
-                  darkMode ? 'bg-gradient-to-t from-black/80 to-transparent' : 'bg-gradient-to-t from-black/70 to-transparent'
-                }`}>
-                  <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <h4 className="font-bold text-sm mb-1 font-serif">{image.title}</h4>
-                    <p className="text-xs font-light opacity-90">{image.description}</p>
+                {/* Modern Dark Minimalist Gradient Overlay */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-400 flex items-end p-5 bg-gradient-to-t from-black via-black/40 to-transparent">
+                  <div className="text-white transform translate-y-2 group-hover:translate-y-0 transition-transform duration-400">
+                    <h4 className="font-serif font-bold text-sm mb-1 tracking-tight">{image.title}</h4>
+                    <p className="text-xs font-light font-sans opacity-80 tracking-wide">{image.description}</p>
                   </div>
                 </div>
               </div>
@@ -163,24 +199,11 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       <ContactSection darkMode={darkMode} />
       
-      {/* Footer */}
-      <footer className={`py-8 text-center font-light ${darkMode ? 'bg-gray-900 text-gray-300' : 'bg-gray-800 text-gray-300'}`}>
-        <p>&copy; 2024 Tenzing Jampa. All rights reserved.</p>
-      </footer>
-
-      {/* Gallery Modal */}
       {selectedImage && (
-        <GalleryModal
-          isOpen={!!selectedImage}
-          onClose={() => setSelectedImage(null)}
-          imageSrc={selectedImage.src}
-          imageTitle={selectedImage.title}
-          imageDescription={selectedImage.description}
-          darkMode={darkMode}
-        />
+        <GalleryModal image={selectedImage} onClose={() => setSelectedImage(null)} darkMode={darkMode} />
       )}
     </div>
   );
