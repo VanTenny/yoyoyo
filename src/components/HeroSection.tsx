@@ -69,12 +69,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
           {/* Smooth Core Center Glow */}
           <div className="absolute inset-14 rounded-full bg-white/[0.04] blur-2xl animate-pulse" />
 
-          {/* Profile Image Container */}
+          {/* Profile Image Container (Photo color left completely original/untouched) */}
           <div className="relative z-10 w-48 h-48 rounded-full p-[3px] bg-gradient-to-b from-white via-neutral-600 to-neutral-900 shadow-[0_0_50px_rgba(255,255,255,0.15)] hover:shadow-[0_0_60px_rgba(255,255,255,0.35)] transition-all duration-500 hover:scale-[1.03]">
             <img
               src="/lovable-uploads/profile-bro.jpg"
               alt="Tenzing Jampa"
-              className="w-full h-full rounded-full object-cover grayscale contrast-110"
+              className="w-full h-full rounded-full object-cover"
               style={{ objectPosition: '68% 48%' }}
             />
           </div>
