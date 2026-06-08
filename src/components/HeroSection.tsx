@@ -28,10 +28,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
       <div className="relative z-10 text-center px-4">
         <div className="mb-8 animate-fade-in">
           <img 
-            src="/lovable-uploads/1.jpeg"
+            src="/lovable-uploads/profile-bro.jpg"
             alt="Tenzing Jampa"
-            className="w-48 h-48 rounded-full mx-auto border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl hover:scale-105 transition-transform duration-500 object-cover object-top"
-            style={{ objectPosition: '50% 20%' }}
+            className="w-48 h-48 rounded-full mx-auto border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl hover:scale-105 transition-transform duration-500 object-cover"
+            style={{ objectPosition: '68% 48%' }}
           />
         </div>
         

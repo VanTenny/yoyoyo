@@ -54,6 +54,27 @@ const projects = [
   },
 ];
 
+const smallerProjects = [
+  {
+    title: "Universal IR Remote Controller",
+    tag: "Electronics · IIT Bombay",
+    description:
+      "Built a microcontroller-based universal IR remote that decodes and replays signals from common consumer electronics. A first-year electronics project — modest in scope, but a good intro to embedded signal handling.",
+    technologies: ["Arduino", "C", "IR Protocols", "Embedded"],
+    image: "/lovable-uploads/ir-controller-thumb.jpg",
+    link: null,
+  },
+  {
+    title: "Line Following Bot",
+    tag: "Robotics · IIT Bombay",
+    description:
+      "Designed and built a two-wheeled line follower with IR reflectance sensors and a PID-tuned motor control loop. Selected as one of the best out of 120+ teams for the institute-wide exhibition.",
+    technologies: ["Arduino", "PID Control", "IR Sensors", "Circuit Design"],
+    image: "/lovable-uploads/line-bot-thumb.jpg",
+    link: null,
+  },
+];
+
 const tagColors: Record<string, { dot: string; text: string; bg: string; darkBg: string }> = {
   "Research · University of Agder, Norway": {
     dot: "#34d399", text: "#34d399", bg: "rgba(52,211,153,0.08)", darkBg: "rgba(52,211,153,0.08)"
@@ -208,9 +229,58 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
               );
             })}
           </div>
+
+          {/* Smaller projects */}
+          <div className="mt-20">
+            <div className="text-center mb-10">
+              <h3 className={`text-2xl md:text-3xl font-bold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                Smaller Projects
+              </h3>
+              <p className={`text-sm max-w-xl mx-auto ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                Earlier hands-on work from my first years — modest in scope, but where a lot of the fundamentals were learned.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {smallerProjects.map((project) => (
+                <div
+                  key={project.title}
+                  className={`flex gap-4 p-4 rounded-xl transition-all duration-300 hover:-translate-y-1 ${
+                    darkMode ? 'bg-gray-900 hover:bg-gray-900/80' : 'bg-white hover:shadow-lg'
+                  }`}
+                  style={{
+                    boxShadow: darkMode
+                      ? '0 2px 12px rgba(0,0,0,0.3)'
+                      : '0 2px 12px rgba(0,0,0,0.05)',
+                  }}
+                >
+                  <div className="w-28 h-28 flex-shrink-0 rounded-lg overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col flex-1 min-w-0">
+                    <span className={`text-xs mb-1 ${darkMode ? 'text-gray-500' : 'text-gray-400'}`}>
+                      {project.tag}
+                    </span>
+                    <h4 className={`text-base font-semibold mb-1.5 leading-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                      {project.title}
+                    </h4>
+                    <p className={`text-xs leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
   );
 };
 
