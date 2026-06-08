@@ -41,7 +41,7 @@ const projects = [
       "Implemented and compared Q-Learning, PPO, DDPG, and SAC algorithms on a simulated highway environment. The project was an 8-week structured programme — good for getting hands-on with RL from scratch rather than just reading about it.",
     technologies: ["Python", "PyTorch", "PPO", "DDPG", "SAC", "OpenAI Gym"],
     image: "/lovable-uploads/thumb-rl.jpg",
-    link: null,
+    link: "https://github.com/VanTenny/Reinforcement-Learning-in-Self-Driving-Cars",
   },
   {
     title: "Cosmology and Dark Matter — Research Report",
