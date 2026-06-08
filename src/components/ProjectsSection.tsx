@@ -54,6 +54,27 @@ const projects = [
   },
 ];
 
+const smallerProjects = [
+  {
+    title: "Universal IR Remote Controller",
+    tag: "Electronics · IIT Bombay",
+    description:
+      "Built a microcontroller-based universal IR remote that decodes and replays signals from common consumer electronics. A first-year electronics project — modest in scope, but a good intro to embedded signal handling.",
+    technologies: ["Arduino", "C", "IR Protocols", "Embedded"],
+    image: "/lovable-uploads/ir-controller-thumb.jpg",
+    link: null,
+  },
+  {
+    title: "Line Following Bot",
+    tag: "Robotics · IIT Bombay",
+    description:
+      "Designed and built a two-wheeled line follower with IR reflectance sensors and a PID-tuned motor control loop. Selected as one of the best out of 120+ teams for the institute-wide exhibition.",
+    technologies: ["Arduino", "PID Control", "IR Sensors", "Circuit Design"],
+    image: "/lovable-uploads/line-bot-thumb.jpg",
+    link: null,
+  },
+];
+
 const tagColors: Record<string, { dot: string; text: string; bg: string; darkBg: string }> = {
   "Research · University of Agder, Norway": {
     dot: "#34d399", text: "#34d399", bg: "rgba(52,211,153,0.08)", darkBg: "rgba(52,211,153,0.08)"
