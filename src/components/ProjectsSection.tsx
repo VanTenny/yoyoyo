@@ -14,7 +14,7 @@ const projects = [
       "Built a high-fidelity MATLAB/Simulink model of a 2MW wind turbine drive train, implementing a five-interval control strategy to regulate rotor speed across wind conditions from 0 to 25 m/s. Modelled generator torque and hydraulic pitch servo dynamics, and verified robustness through transient ramp and step-jump simulations.",
     technologies: ["MATLAB", "Simulink", "Simscape", "Control Systems"],
     image: "/lovable-uploads/thumb-windturbine.jpg",
-    link: null,
+    link: "https://github.com/VanTenny/Wind_Turbine_Project_Researcher",
   },
   {
     title: "Statistical Mechanics of Polymer Chains",
