@@ -23,7 +23,7 @@ const projects = [
       "Derived scaling laws for freely jointed, freely rotating, and worm-like chain architectures. Applied Flory mean-field theory and the thermal blob model to map the transition from ideal Gaussian to swollen coil states, then wrote computational simulations confirming the R ~ N³/⁵ exponent for self-avoiding walks.",
     technologies: ["Statistical Physics", "Python", "Monte Carlo", "Scaling Theory"],
     image: "/lovable-uploads/thumb-polymer.jpg",
-    link: null,
+    link: "https://github.com/VanTenny/BTP_Project_Tenzing/blob/main/22B1808_Report.pdf",
   },
   {
     title: "Mechanical Impacting System — Electrical Analogue",
