@@ -7,7 +7,7 @@ import ContactSection from '../components/ContactSection';
 import GalleryModal from '../components/GalleryModal';
 
 const Index = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [selectedImage, setSelectedImage] = useState<{
     src: string;
     title: string;
@@ -16,7 +16,7 @@ const Index = () => {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('darkMode');
-    if (savedTheme) {
+    if (savedTheme !== null) {
       setDarkMode(JSON.parse(savedTheme));
     }
   }, []);
@@ -48,7 +48,7 @@ const Index = () => {
      {/* CV Section */}
     <section id="cv" className={`py-20 px-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}>
     <div className="max-w-6xl mx-auto text-center">
-      <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-mono">
+      <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-mono">
         Curriculum Vitae
       </h2>
       <p className={`text-lg mb-8 font-light ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
@@ -61,8 +61,8 @@ const Index = () => {
         rel="noopener noreferrer"
         className={`inline-block px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
           darkMode
-            ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
-            : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+            ? 'bg-gradient-to-r from-gray-100 to-gray-400 text-white hover:from-gray-200 hover:to-gray-400'
+            : 'bg-gradient-to-r from-white to-gray-400 text-white hover:from-gray-100 hover:to-gray-300'
         }`}
         >
         Download CV
@@ -76,7 +76,7 @@ const Index = () => {
       {/* Achievements Section */}
       <section id="achievements" className={`py-20 px-4 ${darkMode ? 'bg-gray-800 text-white' : 'bg-gray-50 text-gray-900'}`}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-serif">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-serif">
             Achievements & Recognition
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -116,7 +116,7 @@ const Index = () => {
                 darkMode ? 'bg-gray-900 border-gray-700 hover:border-gray-600' : 'bg-white border-gray-200 hover:border-gray-300'
               }`}>
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-lg font-semibold text-blue-500 font-sans">{achievement.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-100 font-sans">{achievement.title}</h3>
                   <span className={`text-sm px-2 py-1 rounded ${
                     darkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-600'
                   }`}>
@@ -135,7 +135,7 @@ const Index = () => {
       {/* Gallery Section */}
       <section id="gallery" className={`py-20 px-4 ${darkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'}`}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent font-mono">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-mono">
             Gallery
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
