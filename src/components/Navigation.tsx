@@ -30,7 +30,7 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
         <div className="flex justify-between items-center h-16">
           {/* Logo/Name */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
               Tenzing Jampa
             </h1>
           </div>

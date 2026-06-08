@@ -30,13 +30,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
           <img 
             src="/lovable-uploads/profile-bro.jpg"
             alt="Tenzing Jampa"
-            className="w-48 h-48 rounded-full mx-auto border-4 border-gradient-to-r from-blue-400 to-purple-600 shadow-2xl hover:scale-105 transition-transform duration-500 object-cover"
+            className="w-48 h-48 rounded-full mx-auto border-4 border-gradient-to-r from-white via-gray-300 to-gray-500 shadow-2xl hover:scale-105 transition-transform duration-500 object-cover"
             style={{ objectPosition: '68% 48%' }}
           />
         </div>
         
         <h1 className="text-6xl md:text-8xl font-bold mb-4 animate-fade-in delay-300 text-white font-serif tracking-wider">
-          <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent font-extrabold italic">
+          <span className="bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-extrabold italic">
             Tenzing Jampa
           </span>
         </h1>
@@ -59,8 +59,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             className={`px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
               darkMode 
-                ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
-                : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                ? 'bg-gradient-to-r from-gray-100 to-gray-400 text-white hover:from-gray-200 hover:to-gray-400'
+                : 'bg-gradient-to-r from-white to-gray-400 text-white hover:from-gray-100 hover:to-gray-300'
             }`}
           >
             Explore My Journey

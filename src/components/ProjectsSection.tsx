@@ -111,7 +111,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
         >
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
               Projects
             </h2>
             <p className={`text-base max-w-xl mx-auto ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
@@ -218,7 +218,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-400 hover:to-purple-500 hover:shadow-lg hover:shadow-blue-500/25"
+                        className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold transition-all duration-300 bg-gradient-to-r from-white to-gray-400 text-white hover:from-gray-200 hover:to-gray-400 hover:shadow-lg hover:shadow-blue-500/25"
                       >
                         View Project
                         <ExternalLink size={14} />

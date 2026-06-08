@@ -28,7 +28,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
         <div className={`transition-all duration-1000 transform ${
           isVisible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'
         }`}>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           
@@ -50,14 +50,14 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
                     className={`flex items-center space-x-4 p-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                       darkMode 
                         ? 'bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-blue-500/50'
-                        : 'bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-blue-300'
+                        : 'bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-gray-600'
                     }`}
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className={`p-3 rounded-full ${
                       darkMode 
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
-                        : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
+                        ? 'bg-gradient-to-r from-gray-100 to-gray-400 text-white'
+                        : 'bg-gradient-to-r from-white to-gray-400 text-white'
                     }`}>
                       {contact.icon}
                     </div>
@@ -117,8 +117,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
                   type="submit"
                   className={`w-full py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
                     darkMode 
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500'
-                      : 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                      ? 'bg-gradient-to-r from-gray-100 to-gray-400 text-white hover:from-gray-200 hover:to-gray-400'
+                      : 'bg-gradient-to-r from-white to-gray-400 text-white hover:from-gray-100 hover:to-gray-300'
                   }`}
                 >
                   Send Message
