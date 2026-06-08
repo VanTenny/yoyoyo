@@ -269,9 +269,24 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
                     <h4 className={`text-base font-semibold mb-1.5 leading-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>
                       {project.title}
                     </h4>
-                    <p className={`text-xs leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
+                    <p className={`text-xs leading-relaxed flex-1 ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
                       {project.description}
                     </p>
+                    
+                    {/* FIXED: Added CTA for smaller projects */}
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-xs font-semibold flex items-center gap-1 mt-auto pt-2 transition-colors ${
+                          darkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-500'
+                        }`}
+                      >
+                        View Project 
+                        <ExternalLink size={12} />
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
@@ -280,7 +295,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
         </div>
       </div>
     </section>
-
   );
 };
 
