@@ -44,8 +44,8 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
                   onClick={() => scrollToSection(section)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 hover:scale-105 ${
                     darkMode 
-                      ? 'hover:bg-gray-700 hover:text-cyan-400' 
-                      : 'hover:bg-gray-100 hover:text-blue-600'
+                      ? 'hover:bg-gray-700 hover:text-gray-200' 
+                      : 'hover:bg-gray-100 hover:text-white'
                   }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -89,7 +89,7 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
             <button
               onClick={toggleDarkMode}
               className={`p-2 rounded-full transition-all duration-300 hover:scale-110 ${
-                darkMode ? 'bg-gray-700 text-cyan-400' : 'bg-gray-100 text-blue-600'
+                darkMode ? 'bg-gray-700 text-gray-200' : 'bg-gray-800 text-gray-200'
               }`}
               aria-label="Toggle dark mode"
             >
@@ -101,7 +101,7 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
               <SheetTrigger asChild>
                 <button
                   className={`lg:hidden p-2 rounded-full transition-all duration-300 hover:scale-110 ${
-                    darkMode ? 'bg-gray-700 text-cyan-400' : 'bg-gray-100 text-blue-600'
+                    darkMode ? 'bg-gray-700 text-gray-200' : 'bg-gray-800 text-gray-200'
                   }`}
                   aria-label="Open menu"
                 >
@@ -124,8 +124,8 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
                           onClick={() => scrollToSection(section)}
                           className={`px-4 py-3 rounded-md text-left font-medium transition-all duration-300 ${
                             darkMode 
-                              ? 'hover:bg-gray-700 hover:text-cyan-400' 
-                              : 'hover:bg-gray-100 hover:text-blue-600'
+                              ? 'hover:bg-gray-700 hover:text-gray-200' 
+                              : 'hover:bg-gray-100 hover:text-white'
                           }`}
                         >
                           {section.charAt(0).toUpperCase() + section.slice(1)}

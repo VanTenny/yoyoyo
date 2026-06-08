@@ -49,7 +49,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
                     href={contact.href}
                     className={`flex items-center space-x-4 p-4 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg ${
                       darkMode 
-                        ? 'bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-blue-500/50'
+                        ? 'bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-gray-500/50'
                         : 'bg-gray-50 hover:bg-gray-100 border border-gray-200 hover:border-gray-600'
                     }`}
                     style={{ animationDelay: `${index * 100}ms` }}
@@ -78,7 +78,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
                   <label className="block text-sm font-medium mb-2">Name</label>
                   <input 
                     type="text" 
-                    className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 focus:ring-2 focus:ring-gray-400 focus:border-transparent ${
                       darkMode 
                         ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
@@ -91,7 +91,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
                   <label className="block text-sm font-medium mb-2">Email</label>
                   <input 
                     type="email" 
-                    className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 focus:ring-2 focus:ring-gray-400 focus:border-transparent ${
                       darkMode 
                         ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'
@@ -104,7 +104,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ darkMode }) => {
                   <label className="block text-sm font-medium mb-2">Message</label>
                   <textarea 
                     rows={5}
-                    className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none ${
+                    className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 focus:ring-2 focus:ring-gray-400 focus:border-transparent resize-none ${
                       darkMode 
                         ? 'bg-gray-800 border-gray-600 text-white placeholder-gray-400'
                         : 'bg-white border-gray-300 text-gray-900 placeholder-gray-500'

@@ -116,7 +116,7 @@ const Index = () => {
                 darkMode ? 'bg-gray-900 border-gray-700 hover:border-gray-600' : 'bg-white border-gray-200 hover:border-gray-300'
               }`}>
                 <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-lg font-semibold text-blue-500 font-sans">{achievement.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-100 font-sans">{achievement.title}</h3>
                   <span className={`text-sm px-2 py-1 rounded ${
                     darkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-600'
                   }`}>

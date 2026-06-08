@@ -47,7 +47,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
                     key={skill}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 ${
                       darkMode
-                        ? 'bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 text-cyan-400'
+                        ? 'bg-gradient-to-r from-white/10 to-gray-400/10 border border-gray-500/30 text-gray-200'
                         : 'bg-gradient-to-r from-gray-800 to-gray-700 border border-gray-600 text-gray-200'
                     }`}
                     style={{ animationDelay: `${index * 100}ms` }}
