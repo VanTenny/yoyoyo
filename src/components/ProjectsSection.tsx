@@ -11,7 +11,7 @@ const projects = [
     title: "Wind Turbine Drive Train Simulation",
     tag: "Research · University of Agder, Norway",
     description:
-      "Built a high-fidelity MATLAB/Simulink model of a 2MW wind turbine drive train, implementing a five-interval control strategy to regulate rotor speed across wind conditions from 0 to 25 m/s. Modelled generator torque and hydraulic pitch servo dynamics, and verified robustness through transient ramp and step-jump simulations.",
+      "Built a high fidelity MATLAB/Simulink model of a 2MW wind turbine drive train, implementing a five-interval control strategy to regulate rotor speed across wind conditions from 0 to 25 m/s. Modelled generator torque and hydraulic pitch servo dynamics, and verified robustness through transient ramp and step jump simulations.",
     technologies: ["MATLAB", "Simulink", "Simscape", "Control Systems"],
     image: "/lovable-uploads/thumb-windturbine.jpg",
     link: "https://github.com/VanTenny/Wind_Turbine_Project_Researcher",
@@ -20,7 +20,7 @@ const projects = [
     title: "Statistical Mechanics of Polymer Chains",
     tag: "B.Tech Project · IIT Bombay",
     description:
-      "Derived scaling laws for freely jointed, freely rotating, and worm-like chain architectures. Applied Flory mean-field theory and the thermal blob model to map the transition from ideal Gaussian to swollen coil states, then wrote computational simulations confirming the R ~ N³/⁵ exponent for self-avoiding walks.",
+      "Derived scaling laws for freely jointed, freely rotating, and worm-like chain architectures. Applied Flory mean field theory and the thermal blob model to map the transition from ideal Gaussian to swollen coil states, then wrote computational simulations confirming the R ~ N³/⁵ exponent for self avoiding walks.",
     technologies: ["Statistical Physics", "Python", "Monte Carlo", "Scaling Theory"],
     image: "/lovable-uploads/thumb-polymer.jpg",
     link: "https://github.com/VanTenny/BTP_Project_Tenzing/blob/main/22B1808_Report.pdf",
@@ -38,7 +38,7 @@ const projects = [
     title: "RL Agent for Highway Self-Driving",
     tag: "Machine Learning · IIT Bombay Summer of Coding",
     description:
-      "Implemented and compared Q-Learning, PPO, DDPG, and SAC algorithms on a simulated highway environment. The project was an 8-week structured programme — good for getting hands-on with RL from scratch rather than just reading about it.",
+      "Implemented and compared Q-Learning, PPO, DDPG, and SAC algorithms on a simulated highway environment. The project was an 8-week structured programme: good for getting hands on with RL from scratch rather than just reading about it.",
     technologies: ["Python", "PyTorch", "PPO", "DDPG", "SAC", "OpenAI Gym"],
     image: "/lovable-uploads/thumb-rl.jpg",
     link: "https://github.com/VanTenny/Reinforcement-Learning-in-Self-Driving-Cars",
@@ -59,19 +59,19 @@ const smallerProjects = [
     title: "Universal IR Remote Controller",
     tag: "Electronics · IIT Bombay",
     description:
-      "Built a microcontroller-based universal IR remote that decodes and replays signals from common consumer electronics. A first-year electronics project — modest in scope, but a good intro to embedded signal handling.",
+      "Built a microcontroller based universal IR remote that decodes and replays signals from common consumer electronics. A first year electronics project: modest in scope, but a good intro to embedded signal handling.",
     technologies: ["Arduino", "C", "IR Protocols", "Embedded"],
     image: "/lovable-uploads/ir-controller-thumb.jpg",
-    link: null,
+    link: "https://thiv.notion.site/Universal-IR-Remote-29823ba45c8b4f3eb3f5b599a5765c0f",
   },
   {
     title: "Line Following Bot",
     tag: "Robotics · IIT Bombay",
     description:
-      "Designed and built a two-wheeled line follower with IR reflectance sensors and a PID-tuned motor control loop. Selected as one of the best out of 120+ teams for the institute-wide exhibition.",
+      "Designed and built a two-wheeled line follower with IR reflectance sensors and a PID tuned motor control loop. Selected as one of the best out of 120+ teams for the institute wide exhibition.",
     technologies: ["Arduino", "PID Control", "IR Sensors", "Circuit Design"],
     image: "/lovable-uploads/line-bot-thumb.jpg",
-    link: null,
+    link: "https://youtu.be/H12OS-JE9ak?si=EePdXxXT6i6ZnZab",
   },
 ];
 
