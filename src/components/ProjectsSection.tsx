@@ -71,7 +71,7 @@ const smallerProjects = [
       "Designed and built a two-wheeled line follower with IR reflectance sensors and a PID tuned motor control loop. Selected as one of the best out of 120+ teams for the institute wide exhibition.",
     technologies: ["Arduino", "PID Control", "IR Sensors", "Circuit Design"],
     image: "/lovable-uploads/line-bot-thumb.jpg",
-    link: "https://youtu.be/H12OS-JE9ak?si=EePdXxXT6i6ZnZab",
+    link: "https://youtu.be/mOh8zv66rmA",
   },
 ];
 
