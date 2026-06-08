@@ -6,146 +6,107 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('/lovable-uploads/hero-smoke.jpg')` }}
-      >
-        <div className={`absolute inset-0 ${darkMode ? 'bg-black/60' : 'bg-black/40'}`}></div>
-      </div>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black text-white selection:bg-white selection:text-black">
+      {/* Embedded High-Definition Smooth Animations */}
+      <style>{`
+        @keyframes cinematicPan {
+          0% { transform: scale(1.05) translate(0px, 0px); }
+          50% { transform: scale(1.15) translate(-10px, 15px); }
+          100% { transform: scale(1.05) translate(10px, -5px); }
+        }
+        @keyframes hdWaveSlow {
+          0% { transform: rotate(0deg) scale(1); }
+          50% { transform: rotate(180deg) scale(1.08); }
+          100% { transform: rotate(360deg) scale(1); }
+        }
+        @keyframes hdWaveFast {
+          0% { transform: rotate(180deg) scale(1.05); }
+          50% { transform: rotate(0deg) scale(0.92); }
+          100% { transform: rotate(-180deg) scale(1.05); }
+        }
+        .animate-cinematic {
+          animation: cinematicPan 30s ease-in-out infinite alternate;
+        }
+        .animate-hd-wave-1 {
+          animation: hdWaveSlow 20s linear infinite;
+        }
+        .animate-hd-wave-2 {
+          animation: hdWaveFast 14s linear infinite;
+        }
+      `}</style>
 
-      {/* Animated wave gradients */}
+      {/* Moving Background Image */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gray-400/10 rounded-full blur-3xl animate-pulse [animation-delay:1000ms]"></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-cinematic grayscale opacity-80"
+          style={{ backgroundImage: `url('/lovable-uploads/hero-smoke.jpg')` }}
+        />
+        {/* Deep Monochrome Gradient Overlays */}
+        <div className={`absolute inset-0 transition-colors duration-700 ${darkMode ? 'bg-black/80' : 'bg-black/60'}`} />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black" />
       </div>
 
-      <div className="relative z-10 text-center px-4">
-        {/* Profile + Animated Waves */}
-        <div className="mb-8 animate-fade-in relative w-72 h-72 mx-auto flex items-center justify-center">
-          {/* Glow halo */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-white/20 via-gray-400/10 to-transparent blur-2xl animate-pulse" />
+      {/* Ambient Lighting Orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-white/[0.03] rounded-full blur-[130px] animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-neutral-500/[0.05] rounded-full blur-[150px] animate-pulse [animation-delay:2000ms]" />
+      </div>
 
-          {/* Animated SVG waves */}
-          <svg
-            className="absolute inset-0 w-full h-full"
-            viewBox="0 0 300 300"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <defs>
-              <radialGradient id="waveGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="rgba(255,255,255,0.0)" />
-                <stop offset="60%" stopColor="rgba(255,255,255,0.25)" />
-                <stop offset="100%" stopColor="rgba(180,180,180,0.0)" />
-              </radialGradient>
-              <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="rgba(255,255,255,0.9)" />
-                <stop offset="100%" stopColor="rgba(120,120,120,0.2)" />
-              </linearGradient>
-            </defs>
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+        
+        {/* Profile + High Definition Liquid Waves */}
+        <div className="mb-10 relative w-80 h-80 mx-auto flex items-center justify-center">
+          
+          {/* Wave Layer 1 (Outer Fluid Ring) */}
+          <div className="absolute inset-0 rounded-[45%_55%_70%_30%_/_45%_55%_45%_55%] border border-white/20 bg-white/[0.01] animate-hd-wave-1 blur-[0.5px]" />
+          
+          {/* Wave Layer 2 (Mid Fluid Ring Counter-Rotating) */}
+          <div className="absolute inset-3 rounded-[60%_40%_60%_40%_/_60%_40%_60%_40%] border border-neutral-500/30 bg-transparent animate-hd-wave-2 blur-[1px]" />
+          
+          {/* Wave Layer 3 (Tight Inner Ripple) */}
+          <div className="absolute inset-6 rounded-[50%_50%_30%_70%_/_50%_60%_40%_50%] border-2 border-white/10 animate-hd-wave-1 [animation-duration:10s]" />
 
-            {/* Soft rotating wave ring 1 */}
-            <g className="origin-center [transform-box:fill-box] animate-[spin_18s_linear_infinite]">
-              <path
-                d="M150,30
-                   C210,40 260,90 270,150
-                   C260,210 210,260 150,270
-                   C90,260 40,210 30,150
-                   C40,90 90,40 150,30 Z"
-                fill="none"
-                stroke="url(#ringGrad)"
-                strokeWidth="1.2"
-                opacity="0.8"
-              />
-            </g>
+          {/* Smooth Core Center Glow */}
+          <div className="absolute inset-14 rounded-full bg-white/[0.04] blur-2xl animate-pulse" />
 
-            {/* Counter-rotating wave ring 2 */}
-            <g className="origin-center [transform-box:fill-box] animate-[spin_28s_linear_infinite_reverse]">
-              <path
-                d="M150,50
-                   C200,55 245,100 250,150
-                   C245,200 200,245 150,250
-                   C100,245 55,200 50,150
-                   C55,100 100,55 150,50 Z"
-                fill="none"
-                stroke="rgba(255,255,255,0.35)"
-                strokeWidth="0.8"
-              />
-            </g>
-
-            {/* Pulsing radial fill */}
-            <circle cx="150" cy="150" r="120" fill="url(#waveGrad)" className="animate-pulse" />
-
-            {/* Flowing sine waves */}
-            <path
-              fill="none"
-              stroke="rgba(255,255,255,0.45)"
-              strokeWidth="1"
-              d="M0,150 Q75,110 150,150 T300,150"
-            >
-              <animate
-                attributeName="d"
-                dur="6s"
-                repeatCount="indefinite"
-                values="
-                  M0,150 Q75,110 150,150 T300,150;
-                  M0,150 Q75,190 150,150 T300,150;
-                  M0,150 Q75,110 150,150 T300,150"
-              />
-            </path>
-            <path
-              fill="none"
-              stroke="rgba(200,200,200,0.3)"
-              strokeWidth="1"
-              d="M0,160 Q75,200 150,160 T300,160"
-            >
-              <animate
-                attributeName="d"
-                dur="8s"
-                repeatCount="indefinite"
-                values="
-                  M0,160 Q75,200 150,160 T300,160;
-                  M0,160 Q75,120 150,160 T300,160;
-                  M0,160 Q75,200 150,160 T300,160"
-              />
-            </path>
-          </svg>
-
-          {/* Profile image on top */}
-          <img
-            src="/lovable-uploads/profile-bro.jpg"
-            alt="Tenzing Jampa"
-            className="relative z-10 w-48 h-48 rounded-full border-4 border-white/30 shadow-[0_0_60px_rgba(255,255,255,0.25)] hover:scale-105 transition-transform duration-500 object-cover"
-            style={{ objectPosition: '68% 48%' }}
-          />
+          {/* Profile Image Container */}
+          <div className="relative z-10 w-48 h-48 rounded-full p-[3px] bg-gradient-to-b from-white via-neutral-600 to-neutral-900 shadow-[0_0_50px_rgba(255,255,255,0.15)] hover:shadow-[0_0_60px_rgba(255,255,255,0.35)] transition-all duration-500 hover:scale-[1.03]">
+            <img
+              src="/lovable-uploads/profile-bro.jpg"
+              alt="Tenzing Jampa"
+              className="w-full h-full rounded-full object-cover grayscale contrast-110"
+              style={{ objectPosition: '68% 48%' }}
+            />
+          </div>
         </div>
 
-        <h1 className="text-6xl md:text-8xl font-bold mb-4 animate-fade-in delay-300 text-white font-serif tracking-wider">
-          <span className="bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent font-extrabold italic">
+        {/* Typography - Pure Black & White Aesthetic */}
+        <h1 className="text-6xl md:text-8xl font-bold mb-6 tracking-tight font-serif">
+          <span className="bg-gradient-to-b from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent font-extrabold antialiased">
             Tenzing Jampa
           </span>
         </h1>
 
-        <div className="mb-8 animate-fade-in delay-400">
-          <p className="text-lg md:text-xl mb-2 text-gray-200">
-            Final Year Undergraduate at <span className="font-semibold text-white">IIT Bombay</span>
+        <div className="mb-8 space-y-2">
+          <p className="text-xl md:text-2xl font-light text-neutral-300 tracking-wide">
+            Final Year Undergraduate at <span className="font-semibold text-white border-b border-white/20 pb-1">IIT Bombay</span>
           </p>
-          <p className="text-lg md:text-xl mb-6 text-gray-200">
-            Majoring in <span className="font-semibold text-gray-300">Engineering Physics</span>
+          <p className="text-lg md:text-xl text-neutral-400 font-mono tracking-wider">
+            Majoring in Engineering Physics
           </p>
         </div>
 
-        <p className="text-xl md:text-2xl mb-8 animate-fade-in delay-500 text-gray-200">
+        <p className="text-lg md:text-xl mb-10 text-neutral-400 max-w-md mx-auto font-light leading-relaxed">
           Researcher, Learner and a Fitness Enthusiast
         </p>
 
-        <div className="animate-fade-in delay-700">
+        <div>
           <button
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl bg-gradient-to-r from-gray-100 to-gray-400 text-black hover:from-white hover:to-gray-300"
+            className="group relative px-8 py-4 rounded-full font-medium tracking-wide overflow-hidden bg-white text-black transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
           >
-            Explore My Journey
+            <span className="relative z-10">Explore My Journey</span>
+            <div className="absolute inset-0 bg-neutral-200 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
           </button>
         </div>
       </div>
