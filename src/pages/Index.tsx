@@ -196,6 +196,7 @@ const Index = () => {
                 <img 
                   src={image.src} 
                   alt={image.title}
+                  style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                 />
                 {/* Modern Dark Minimalist Gradient Overlay */}
