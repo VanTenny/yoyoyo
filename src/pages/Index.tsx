@@ -5,12 +5,6 @@ import AboutSection from '../components/AboutSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
 import GalleryModal from '../components/GalleryModal';
-import epImg from '../assets/EP_26.jpeg.asset.json';
-import milanImg from '../assets/Milan.jpeg.asset.json';
-import norwayImg from '../assets/Norway.jpeg.asset.json';
-import osloImg from '../assets/oslo.jpeg.asset.json';
-import parisImg from '../assets/paris.jpeg.asset.json';
-import priekestolenImg from '../assets/priekestolen.jpeg.asset.json';
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -37,10 +31,10 @@ const Index = () => {
     { src: "/lovable-uploads/29ee7e40-1d52-4035-9d41-fe577728512b.png", title: "Basketball Championship", description: "Secured 3rd place in Hostel 5 General Championships at IIT Bombay" },
     { src: "/lovable-uploads/fc7c8e77-4241-4360-9e2a-fc2909edc5a9.png", title: "Marathon Achievement", description: "Participating in my first 5K Run organized by Avhaan IITB" },
     { src: "/lovable-uploads/76f776b4-d5ff-4f0f-98f8-e4b2a52d1892.png", title: "Hiking", description: "At the summit of Rajgad fort, Maharashtra with my friends" },
-    { src: "/lovable-uploads/EP_36.png", title: "EP_26", description: "Graduation Photoshoot of Engineering Physics batch'26" },
+    { src: "/lovable-uploads/EP_26.png", title: "EP_26", description: "Graduation Photoshoot of Engineering Physics batch'26" },
     { src: "/lovable-uploads/Milan.png", title: "Milan", description: "At Doumoo di Milano, Italy" },
     { src: "/lovable-uploads/Norway.png", title: "Norway", description: "Homecooked dinner by me, Nanako and Asumi for our international friends at UiA, Kristiansand" },
-    { src: "/lovable-uploads/Oslo.png", title: "Oslo", description: "The upper deck of Astrup Fearnley Museum of Modern Art in Oslo, Norway" },
+    { src: "/lovable-uploads/oslo.png", title: "Oslo", description: "The upper deck of Astrup Fearnley Museum of Modern Art in Oslo, Norway" },
     { src: "/lovable-uploads/paris.png", title: "Paris", description: "At a museum in Paris, France", objectPosition: "center 55%" },
     { src: "/lovable-uploads/priekestolen.png", title: "Preikestolen (Pulpit Rock)", description: "Sumitted a world famous nature's wonder Preikestolen, Norway" },
     { src: "/lovable-uploads/dbaaa8ba-7a6f-4196-aa66-c8be8f2077db.png", title: "Mount Fuji", description: "Climbed Mount Fuji on a crazy hike which took around 7 hours" },
