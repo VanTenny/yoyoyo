@@ -41,7 +41,7 @@ const Index = () => {
     { src: milanImg.url, title: "Milan", description: "" },
     { src: norwayImg.url, title: "Norway", description: "" },
     { src: osloImg.url, title: "Oslo", description: "" },
-    { src: parisImg.url, title: "Paris", description: "", objectPosition: "center 35%" },
+    { src: parisImg.url, title: "Paris", description: "", objectPosition: "center 55%" },
     { src: priekestolenImg.url, title: "Priekestolen", description: "" },
     { src: "/lovable-uploads/dbaaa8ba-7a6f-4196-aa66-c8be8f2077db.png", title: "Mount Fuji", description: "Climbed Mount Fuji on a crazy hike which took around 7 hours" },
     { src: "/lovable-uploads/13548499-53f1-42f5-b9c4-21774e0afef6.png", title: "Osaka Palace", description: "Travelling and being crazy about Japan define me" },
