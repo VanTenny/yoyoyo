@@ -60,7 +60,7 @@ const SidebarProvider = React.forwardRef<
       className,
       style,
       children,
-      {...props}
+      ...props
     },
     ref
   ) => {
@@ -159,7 +159,7 @@ const Sidebar = React.forwardRef<
       collapsible = "offcanvas",
       className,
       children,
-      {...props}
+      ...props
     },
     ref
   ) => {
@@ -531,7 +531,7 @@ const SidebarMenuButton = React.forwardRef<
       size = "default",
       tooltip,
       className,
-      {...props}
+      ...props
     },
     ref
   ) => {
