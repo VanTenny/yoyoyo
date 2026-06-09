@@ -115,7 +115,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
               Projects
             </h2>
             <p className={`text-base max-w-xl mx-auto ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-              A selection of work across physics, simulation, and machine learning — roughly in order of how proud I am of them.
+              A selection of work across physics, simulation, and machine learning roughly in order of how proud I am of them.
             </p>
           </div>
 
@@ -237,7 +237,7 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ darkMode }) => {
                 Smaller Projects
               </h3>
               <p className={`text-sm max-w-xl mx-auto ${darkMode ? 'text-gray-400' : 'text-gray-500'}`}>
-                Earlier hands-on work from my first years — modest in scope, but where a lot of the fundamentals were learned.
+                Earlier hands on work from my first years modest in scope, but where a lot of the fundamentals were learned.
               </p>
             </div>
 
