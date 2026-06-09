@@ -5,6 +5,12 @@ import AboutSection from '../components/AboutSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
 import GalleryModal from '../components/GalleryModal';
+import epImg from '../assets/EP_26.jpeg.asset.json';
+import milanImg from '../assets/Milan.jpeg.asset.json';
+import norwayImg from '../assets/Norway.jpeg.asset.json';
+import osloImg from '../assets/oslo.jpeg.asset.json';
+import parisImg from '../assets/paris.jpeg.asset.json';
+import priekestolenImg from '../assets/priekestolen.jpeg.asset.json';
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(true);
