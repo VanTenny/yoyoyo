@@ -5,6 +5,12 @@ import AboutSection from '../components/AboutSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
 import GalleryModal from '../components/GalleryModal';
+import epImg from '../assets/EP_26.jpeg.asset.json';
+import milanImg from '../assets/Milan.jpeg.asset.json';
+import norwayImg from '../assets/Norway.jpeg.asset.json';
+import osloImg from '../assets/oslo.jpeg.asset.json';
+import parisImg from '../assets/paris.jpeg.asset.json';
+import priekestolenImg from '../assets/priekestolen.jpeg.asset.json';
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -31,7 +37,12 @@ const Index = () => {
     { src: "/lovable-uploads/29ee7e40-1d52-4035-9d41-fe577728512b.png", title: "Basketball Championship", description: "Secured 3rd place in Hostel 5 General Championships at IIT Bombay" },
     { src: "/lovable-uploads/fc7c8e77-4241-4360-9e2a-fc2909edc5a9.png", title: "Marathon Achievement", description: "Participating in my first 5K Run organized by Avhaan IITB" },
     { src: "/lovable-uploads/76f776b4-d5ff-4f0f-98f8-e4b2a52d1892.png", title: "Hiking", description: "At the summit of Rajgad fort, Maharashtra with my friends" },
-    { src: "/lovable-uploads/094dd071-8534-4c4c-b731-9b1417dd0418.png", title: "Botanical Garden", description: "Just me chilling" },
+    { src: epImg.url, title: "EP_26", description: "" },
+    { src: milanImg.url, title: "Milan", description: "" },
+    { src: norwayImg.url, title: "Norway", description: "" },
+    { src: osloImg.url, title: "Oslo", description: "" },
+    { src: parisImg.url, title: "Paris", description: "" },
+    { src: priekestolenImg.url, title: "Priekestolen", description: "" },
     { src: "/lovable-uploads/dbaaa8ba-7a6f-4196-aa66-c8be8f2077db.png", title: "Mount Fuji", description: "Climbed Mount Fuji on a crazy hike which took around 7 hours" },
     { src: "/lovable-uploads/13548499-53f1-42f5-b9c4-21774e0afef6.png", title: "Osaka Palace", description: "Travelling and being crazy about Japan define me" },
     { src: "/lovable-uploads/0772ca7f-9177-4e03-ae83-76db7bf4215f.png", title: "Cultural Exchange Dinner", description: "Enjoying time with friends from various countries" }
