@@ -163,6 +163,8 @@ const Index = () => {
         </div>
       </section>
 
+      <CourseworkSection darkMode={darkMode} />
+
       {/* Cinematic Image Gallery Section */}
       <section 
         id="gallery" 
