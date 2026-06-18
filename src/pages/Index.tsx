@@ -5,6 +5,7 @@ import AboutSection from '../components/AboutSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
 import GalleryModal from '../components/GalleryModal';
+import CourseworkSection from '../components/CourseworkSection';
 
 const Index = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -161,6 +162,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <CourseworkSection darkMode={darkMode} />
 
       {/* Cinematic Image Gallery Section */}
       <section 

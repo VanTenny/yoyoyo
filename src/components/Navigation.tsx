@@ -20,7 +20,7 @@ const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => 
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const navItems = ['about', 'cv', 'projects', 'achievements', 'gallery', 'contact'];
+  const navItems = ['about', 'cv', 'projects', 'achievements', 'coursework', 'gallery', 'contact'];
 
   return (
     <nav className={`fixed top-0 w-full z-50 backdrop-blur-md transition-all duration-300 ${
