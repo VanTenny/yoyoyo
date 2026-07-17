@@ -141,26 +141,66 @@ const Index = () => {
                 description: "Completed a yearlong basketball training at IIT Bombay and secured 3rd place in the Hostel 5 General Championships.",
                 year: "2025"
               }
-            ].map((achievement, index) => (
+            ].map((achievement: any, index) => (
               <div 
                 key={index} 
-                className={`p-8 rounded-xl transition-all duration-500 hover:scale-[1.02] border backdrop-blur-md ${
-                  darkMode 
-                    ? 'bg-white/[0.01] border-white/10 hover:border-white/30 hover:bg-white/[0.03]' 
-                    : 'bg-black/[0.01] border-black/10 hover:border-black/30 hover:bg-black/[0.03]'
+                className={`relative p-8 rounded-xl transition-all duration-500 hover:scale-[1.02] border backdrop-blur-md overflow-hidden ${
+                  achievement.highlight ? 'md:col-span-2 lg:col-span-3' : ''
+                } ${
+                  achievement.highlight
+                    ? darkMode
+                      ? 'bg-gradient-to-br from-white/[0.08] via-white/[0.03] to-transparent border-white/30 shadow-[0_0_40px_rgba(255,255,255,0.06)] hover:border-white/50'
+                      : 'bg-gradient-to-br from-black/[0.06] via-black/[0.02] to-transparent border-black/30 shadow-[0_0_40px_rgba(0,0,0,0.05)] hover:border-black/50'
+                    : darkMode 
+                      ? 'bg-white/[0.01] border-white/10 hover:border-white/30 hover:bg-white/[0.03]' 
+                      : 'bg-black/[0.01] border-black/10 hover:border-black/30 hover:bg-black/[0.03]'
                 }`}
               >
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className={`text-lg font-serif font-bold tracking-tight ${darkMode ? 'text-white' : 'text-black'}`}>
+                {achievement.highlight && (
+                  <span className={`absolute top-4 right-4 text-[10px] font-mono uppercase tracking-[0.2em] px-2 py-1 rounded-full border ${
+                    darkMode ? 'border-white/30 text-white bg-white/5' : 'border-black/30 text-black bg-black/5'
+                  }`}>
+                    Featured
+                  </span>
+                )}
+                <div className="flex justify-between items-start mb-4 gap-4">
+                  <h3 className={`font-serif font-bold tracking-tight ${
+                    achievement.highlight ? 'text-2xl md:text-3xl' : 'text-lg'
+                  } ${darkMode ? 'text-white' : 'text-black'}`}>
                     {achievement.title}
                   </h3>
-                  <span className={`text-xs font-mono px-2 py-1 rounded border tracking-wider ${
-                    darkMode ? 'bg-white/5 border-white/10 text-neutral-300' : 'bg-black/5 border-black/10 text-neutral-600'
-                  }`}>
-                    {achievement.year}
-                  </span>
+                  {!achievement.highlight && (
+                    <span className={`text-xs font-mono px-2 py-1 rounded border tracking-wider whitespace-nowrap ${
+                      darkMode ? 'bg-white/5 border-white/10 text-neutral-300' : 'bg-black/5 border-black/10 text-neutral-600'
+                    }`}>
+                      {achievement.year}
+                    </span>
+                  )}
                 </div>
-                <p className={`text-sm font-light leading-relaxed tracking-wide ${darkMode ? 'text-neutral-400' : 'text-neutral-600'}`}>
+                {achievement.highlight && (
+                  <div className="flex flex-wrap gap-3 mb-5">
+                    {[
+                      { label: 'Reading', value: '24' },
+                      { label: 'Listening', value: '30', perfect: true },
+                      { label: 'Speaking', value: '20' },
+                      { label: 'Writing', value: '25' },
+                    ].map((s) => (
+                      <div key={s.label} className={`px-4 py-2 rounded-lg border font-mono text-sm ${
+                        s.perfect
+                          ? darkMode ? 'bg-white/10 border-white/40 text-white' : 'bg-black/10 border-black/40 text-black'
+                          : darkMode ? 'bg-white/[0.03] border-white/10 text-neutral-300' : 'bg-black/[0.03] border-black/10 text-neutral-700'
+                      }`}>
+                        <span className="opacity-70 mr-2">{s.label}</span>
+                        <span className="font-bold">{s.value}</span>
+                        <span className="opacity-50">/30</span>
+                        {s.perfect && <span className="ml-2 text-xs opacity-80">★</span>}
+                      </div>
+                    ))}
+                  </div>
+                )}
+                <p className={`font-light leading-relaxed tracking-wide ${
+                  achievement.highlight ? 'text-base' : 'text-sm'
+                } ${darkMode ? 'text-neutral-400' : 'text-neutral-600'}`}>
                   {achievement.description}
                 </p>
               </div>
