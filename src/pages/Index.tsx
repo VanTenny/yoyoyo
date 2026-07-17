@@ -105,6 +105,12 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
+              {
+                title: "TOEFL iBT — 99 / 120 (CEFR C1)",
+                description: "Scored 99/120 on the TOEFL iBT (Home Edition, Norway) with a perfect 30/30 in Listening. Section scores — Reading 24, Listening 30, Speaking 20, Writing 25 — placing me at CEFR C1 (Advanced) English proficiency.",
+                year: "2025",
+                highlight: true,
+              },
               { 
                 title: "Top 1.10% in JEE Main", 
                 description: "Secured a position in the top 1.10% among 0.9 million+ candidates in the JEE Main examination.",
