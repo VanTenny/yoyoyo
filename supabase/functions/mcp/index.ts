@@ -125,6 +125,7 @@ var list_projects_default = defineTool2({
 // src/lib/mcp/tools/list-achievements.ts
 import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.23.0";
 var ACHIEVEMENTS = [
+  { title: "TOEFL iBT \u2014 99/120 (CEFR C1)", year: "2025", description: "99/120 on the TOEFL iBT with a perfect 30/30 in Listening (Reading 24, Listening 30, Speaking 20, Writing 25). CEFR C1 \u2014 Advanced English proficiency." },
   { title: "Top 1.10% in JEE Main", year: "2022", description: "Top 1.10% among 0.9 million+ candidates in JEE Main." },
   { title: "Top 2.57% in JEE Advanced", year: "2022", description: "Top 2.57% rank among 0.15 million+ candidates in JEE Advanced." },
   { title: "Institute Exhibition Selection", year: "2023", description: "One of the best teams out of 120+ selected for the institute-wide exhibition for the Line Following Bot project at IIT Bombay." },
