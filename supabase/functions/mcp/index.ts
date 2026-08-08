@@ -132,7 +132,8 @@ var ACHIEVEMENTS = [
   { title: "Institute Exhibition Selection", year: "2023", description: "One of the best teams out of 120+ selected for the institute-wide exhibition for the Line Following Bot project at IIT Bombay." },
   { title: "Perfect Score in Product Design", year: "2025", description: "Perfect score (10/10) from PhD-level evaluators for all product design projects in the DE344 course." },
   { title: "A+ in Japanese Communication", year: "2024", description: "A+ in a 100-hour Japanese Communication course by IIT Bombay's Office of International Relations." },
-  { title: "Basketball Championship Podium", year: "2025", description: "3rd place in the Hostel 5 General Championships at IIT Bombay after a yearlong basketball training." }
+  { title: "Basketball Championship Podium", year: "2025", description: "3rd place in the Hostel 5 General Championships at IIT Bombay after a yearlong basketball training." },
+  { title: "Mount Fuji Summit", year: "2025", description: "Climbed Mount Fuji in Japan on a challenging seven-hour ascent to the summit." }
 ];
 var list_achievements_default = defineTool3({
   name: "list_achievements",

@@ -135,12 +135,17 @@ const Index = () => {
                 description: "Awarded an A+ in a 100-hour Japanese Communication course offered by IIT Bombay's Office of International Relations.",
                 year: "2024"
               },
-              { 
-                title: "Basketball Championship Podium", 
-                description: "Completed a yearlong basketball training at IIT Bombay and secured 3rd place in the Hostel 5 General Championships.",
-                year: "2025"
-              }
-            ].map((achievement: any, index) => (
+               { 
+                 title: "Basketball Championship Podium", 
+                 description: "Completed a yearlong basketball training at IIT Bombay and secured 3rd place in the Hostel 5 General Championships.",
+                 year: "2025"
+               },
+               {
+                 title: "Mount Fuji Summit",
+                 description: "Climbed Mount Fuji in Japan on a challenging seven-hour ascent to the summit.",
+                 year: "2025"
+               }
+             ].map((achievement: any, index) => (
               <div 
                 key={index} 
                 className={`relative p-8 rounded-xl transition-all duration-500 hover:scale-[1.02] border backdrop-blur-md overflow-hidden ${
