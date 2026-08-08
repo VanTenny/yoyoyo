@@ -40,10 +40,9 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
               <p className={`text-lg md:text-xl font-light leading-relaxed tracking-wide ${
                 darkMode ? 'text-neutral-300' : 'text-neutral-600'
               }`}>
-                I'm Tenzing, a final-year <span className={`font-medium ${darkMode ? 'text-white' : 'text-black'}`}>Engineering Physics</span> student at IIT Bombay, originally from
-                Kalimpong in the eastern Himalayas. My work tends to sit at the intersection of
-                physics and computation whether that's modelling polymer chains, simulating wind
-                turbine drive trains, or training RL agents.
+                I'm Tenzing, an <span className={`font-medium ${darkMode ? 'text-white' : 'text-black'}`}>Engineering Physics</span> graduate from IIT Bombay, originally from
+                Kalimpong in the eastern Himalayas. I will begin a Master's degree in Physics at
+                <span className={`font-medium ${darkMode ? 'text-white' : 'text-black'}`}> Karlsruhe Institute of Technology (KIT)</span> in the Winter 2026/27 semester. My work tends to sit at the intersection of physics and computation, whether that's modelling polymer chains, simulating wind turbine drive trains, or training RL agents.
               </p>
 
               <p className={`text-lg md:text-xl font-light leading-relaxed tracking-wide ${
@@ -101,34 +100,38 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
                 <ul className={`space-y-4 text-base md:text-lg font-light tracking-wide ${
                   darkMode ? 'text-neutral-300' : 'text-neutral-600'
                 }`}>
-                  <li className="flex items-start gap-3">
-                    <span className="grayscale opacity-80">🎓</span> 
-                    <span>B.Tech Engineering Physics · IIT Bombay ('26)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="grayscale opacity-80">🔬</span> 
-                    <span>Condensed Matter · Nonlinear Dynamics · Astrophysics</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="grayscale opacity-80">🏅</span> 
-                    <span>Top 1.1% JEE Main · Top 2.6% JEE Advanced</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="grayscale opacity-80">🌏</span> 
-                    <span>Six languages: English, Hindi, Nepali, Tibetan, Japanese, German</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="grayscale opacity-80">✈️</span> 
-                    <span>Exchange Student · University of Agder, Norway ('25)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="grayscale opacity-80">🏀</span> 
-                    <span>Basketball · 3rd place, IIT Bombay General Championships ('25)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="grayscale opacity-80">📍</span> 
-                    <span>Based in Mumbai, India</span>
-                  </li>
+                   <li className="flex items-start gap-3">
+                     <span className="grayscale opacity-80">🎓</span> 
+                     <span>Engineering Physics graduate · IIT Bombay ('26)</span>
+                   </li>
+                   <li className="flex items-start gap-3">
+                     <span className="grayscale opacity-80">📚</span> 
+                     <span>Incoming Master's student in Physics · KIT · Winter 2026/27</span>
+                   </li>
+                   <li className="flex items-start gap-3">
+                     <span className="grayscale opacity-80">🔬</span> 
+                     <span>Condensed Matter · Nonlinear Dynamics · Astrophysics</span>
+                   </li>
+                   <li className="flex items-start gap-3">
+                     <span className="grayscale opacity-80">🏅</span> 
+                     <span>Top 1.1% JEE Main · Top 2.6% JEE Advanced</span>
+                   </li>
+                   <li className="flex items-start gap-3">
+                     <span className="grayscale opacity-80">🌏</span> 
+                     <span>Six languages: English, Hindi, Nepali, Tibetan, Japanese, German</span>
+                   </li>
+                   <li className="flex items-start gap-3">
+                     <span className="grayscale opacity-80">✈️</span> 
+                     <span>Exchange Student · University of Agder, Norway ('25)</span>
+                   </li>
+                   <li className="flex items-start gap-3">
+                     <span className="grayscale opacity-80">🏀</span> 
+                     <span>Basketball · 3rd place, IIT Bombay General Championships ('25)</span>
+                   </li>
+                   <li className="flex items-start gap-3">
+                     <span className="grayscale opacity-80">📍</span> 
+                     <span>Based in Mumbai, India</span>
+                   </li>
                 </ul>
               </div>
             </div>

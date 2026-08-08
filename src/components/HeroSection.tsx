@@ -89,10 +89,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
 
         <div className="mb-8 space-y-2">
           <p className="text-xl md:text-2xl font-light text-neutral-300 tracking-wide">
-            Final Year Undergraduate at <span className="font-semibold text-white border-b border-white/20 pb-1">IIT Bombay</span>
+            Engineering Physics graduate from <span className="font-semibold text-white border-b border-white/20 pb-1">IIT Bombay</span>
           </p>
           <p className="text-lg md:text-xl text-neutral-400 font-mono tracking-wider">
-            Majoring in Engineering Physics
+            Incoming Master's student in Physics at KIT · Winter 2026/27
           </p>
         </div>
 
