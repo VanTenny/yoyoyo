@@ -9,15 +9,16 @@ import { defineMcp } from "npm:@lovable.dev/mcp-js@0.23.0";
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.23.0";
 var ABOUT = {
   name: "Tenzing Jampa",
-  headline: "Final-year Engineering Physics student at IIT Bombay",
+  headline: "Engineering Physics graduate from IIT Bombay; incoming Master's student in Physics at KIT",
   hometown: "Kalimpong, Eastern Himalayas",
   location: "Mumbai, India",
   bio: [
-    "I'm Tenzing, a final-year Engineering Physics student at IIT Bombay, originally from Kalimpong in the eastern Himalayas. My work tends to sit at the intersection of physics and computation \u2014 modelling polymer chains, simulating wind turbine drive trains, or training RL agents.",
+    "I'm Tenzing, an Engineering Physics graduate from IIT Bombay, originally from Kalimpong in the eastern Himalayas. I will begin a Master's degree in Physics at Karlsruhe Institute of Technology (KIT) in the Winter 2026/27 semester. My work tends to sit at the intersection of physics and computation \u2014 modelling polymer chains, simulating wind turbine drive trains, or training RL agents.",
     "I spent Autumn 2025 as an exchange student at the University of Agder in Norway, which was equal parts great research experience and a genuine culture shock. Outside academics, I play basketball, speak six languages, and pick up random side projects that usually teach me more than I expected."
   ],
   quickFacts: [
-    "B.Tech Engineering Physics \xB7 IIT Bombay ('26)",
+    "Engineering Physics graduate \xB7 IIT Bombay ('26)",
+    "Incoming Master's student in Physics \xB7 KIT \xB7 Winter 2026/27",
     "Condensed Matter \xB7 Nonlinear Dynamics \xB7 Astrophysics",
     "Top 1.1% JEE Main \xB7 Top 2.6% JEE Advanced",
     "Six languages: English, Hindi, Nepali, Tibetan, Japanese, German",
