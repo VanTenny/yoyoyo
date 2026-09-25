@@ -130,7 +130,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode }) => {
                    </li>
                    <li className="flex items-start gap-3">
                      <span className="grayscale opacity-80">📍</span> 
-                     <span>Based in Mumbai, India</span>
+                     <span>Based in Karlsruhe, Germany</span>
                    </li>
                 </ul>
               </div>
