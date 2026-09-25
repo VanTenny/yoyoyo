@@ -92,7 +92,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ darkMode }) => {
             Engineering Physics graduate from <span className="font-semibold text-white border-b border-white/20 pb-1">IIT Bombay</span>
           </p>
           <p className="text-lg md:text-xl text-neutral-400 font-mono tracking-wider">
-            Incoming Master's student in Physics at KIT · Winter 2026/27
+            Master's student in Physics at KIT · Karlsruhe, Germany
           </p>
         </div>
 
